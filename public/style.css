@@ -58,7 +58,7 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
-  
+  font-family: 'Satoshi'
 }
 
 /*
@@ -519,12 +519,22 @@ video {
   justify-content: space-between;
   padding: 30px 100px;
 }
-
+ 
 .links {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   gap: 50px;
+}
+
+.links a {
+  font-family: 'Athletics' !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: capitalize;
+  color: #4F4F4F;
 }
 
 .buttons button {
