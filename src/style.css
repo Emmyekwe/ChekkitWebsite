@@ -191,6 +191,7 @@ color: #4E6269;
   align-items: center;
   padding: 0px;
   gap: 16px;
+  margin-top: 150px;
 }
 
 .brands {
@@ -1731,7 +1732,7 @@ top: 277px;
        }
 
        .tech-col1 .tech-img {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
        }
 
        .tech-col1 {
@@ -1742,7 +1743,7 @@ top: 277px;
         padding: 50px 30px;
         gap: 20px;
         width: 595px;
-        height: 697px;
+        height: 757px;
         background: #F1FFF9;
         border-radius: 20px;
        }
@@ -1778,8 +1779,8 @@ top: 277px;
         text-align: center;
         text-transform: capitalize;        
         color: #153853;
-        width: 122px;
-        height: 24px;
+        /* width: 122px;
+        height: 24px; */
        }
 
 
@@ -1873,7 +1874,7 @@ top: 277px;
       }
 
         .trace-top-text span { 
-        color: #FFFFFF;
+        color: #FFFFFF; 
       }
 
       .trace-top-text p {
