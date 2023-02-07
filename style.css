@@ -24,7 +24,7 @@
 ::after {
   --tw-content: '';
 }
- 
+  
 /*
 1. Use a consistent sensible line-height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
@@ -607,6 +607,68 @@ video {
   background: white;
   
   } */
+
+.case-hero {
+  position: relative;
+}
+
+.case-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 100px 100px;
+  top: 30px;
+}
+
+.case-content h1 {
+  /* width: 800px; */
+  /* height: 81px; */
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 81px;
+  color: #FFFFFF;
+}
+
+
+.case-content p {
+  /* width: 770px;
+  height: 24px; */
+  font-family: 'Satoshi';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;  
+  display: flex;
+  align-items: center;  
+  color: #FFFFFF;
+}
+
+
+.case-study-hero {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  margin: 100px 100px;
+  width: 1240px;
+  height: 382px;
+}
+
+.case-study-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 40px;
+  gap: 83px;
+
+  width: 620px;
+  height: 382px;
+
+  background: #FAFAFA;
+}
 
 .products-container {
   margin: 150px 0;
