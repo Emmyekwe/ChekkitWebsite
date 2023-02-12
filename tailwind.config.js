@@ -6,7 +6,16 @@ module.exports = {
     './public/**/*.{html,js}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        center: true,
+        screens: {
+          lg: "1124px",
+          xl: "1124px",
+          "2xl": "1124px",
+        }
+      }
+    },
   },
   plugins: [],
 }

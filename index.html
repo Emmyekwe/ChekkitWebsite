@@ -13,31 +13,40 @@
 <body>  
    <section>
         <nav class="navbar">
+            <!-- <nav class="container"> -->
             <div class="logo">
               <a href="index.html"> <img src="/public/assets/logo.svg" alt="logo" /> </a>
             </div>
 
-            <div class="links">
-                <a href="/aboutus.html">About Us</a>
-                <div class="dropdown">
-                    <a class="dropbtn" href="/products.html">Products <i class="fa-solid fa-angle-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="/products/chekkitapp.html">ChekkitApp</a>
-                        <a href="#">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                        <a href="/products/traceability.html">Traceability</a>
-                        <a href="/products/consumer-intelligence.html">Consumer Intelligence <i class="fa-solid fa-angle-right"></i></a>
-                      </div>
-                </div>
-                
-                <a href="#">Case Studies</a>
-            </div>
+                <div class="links" id="myTopnav">
+                    <a href="/aboutus.html">About Us</a>
+                    <div class="dropdown">
+                        <a class="dropbtn" href="/products.html">Products <i class="fa-solid fa-angle-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="/products/chekkitapp.html">ChekkitApp</a>
+                            <a href="#">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                            <a href="/products/traceability.html">Traceability</a>
+                            <a href="/products/consumer-intelligence.html">Consumer Intelligence <i class="fa-solid fa-angle-right"></i></a>
+                        </div>
+                    </div>
+                     
+                    <a href="./case-studies.html">Case Studies</a>
 
-            <div class="buttons">
-                <button class="client">Client Login</button>
-                <button class="request">Request Demo</button>
-            </div>
+                    <div class="buttons">
+                        <button class="client">Client Login</button>
+                        <button class="request">Request Demo</button>
+                    </div>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                
+                </div>
+
+               
         </nav>
-   </section>   
+   </section> 
+
+
    <section class="case-hero">
     <div>
         <img src="/public/assets/homescreen-img.svg" alt="home hero" />
@@ -47,6 +56,8 @@
         <p>Check  out some solutions that have been deployed for some clients</p>
     </div>
 </section>
+
+
    <section class="products-container">
         <div class="products">
             <p>OUR PRODUCTS</p>
@@ -88,7 +99,9 @@
             </div>    
         </div>
    </section>
-   <section id="marquee" class="brands-container">
+
+
+   <section id="marquee" class="industry-container">
         <div class="brands">
             <p> <a href="brandsandindustry.html">brands and industries</a></p>
         </div>
@@ -140,8 +153,11 @@
             </div>
         </div>
    </section>
+
+
+
    <section class="press-container">
-   <!-- <div class="press-wrapper"> -->
+   <div class="press-wrapper">
         <div class="media-col">
             <div class="press">
                 <p>PRESS AND MEDIA</p>
@@ -161,6 +177,9 @@
         </div>
    <!-- </div> -->
    </section>
+
+
+   <!-- fixed -->
    <section id="marquee" class="brands-container">
         <div class="brands">
             <p>brands and partners </p>
@@ -221,5 +240,14 @@
         var right = document.querySelector(".scroll-images")
         right.scrollBy(-350, 0)
     }
+
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "links") {
+    x.className += " responsive";
+  } else {
+    x.className = "links";
+  }
+}
 </script>
-</html>
+</html> 

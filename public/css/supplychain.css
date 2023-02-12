@@ -1934,7 +1934,103 @@ top: 277px;
     line-height: 180%;    
     letter-spacing: 0.02em;    
     color: #EEF9F8;
-      }
+  }
+
+  .supply-apps {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 1240px;
+    height: 600px;
+    margin: 100px 100px;
+    position: relative;
+  }
+
+  .supply-apps-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    width: 1240px;
+    height: 600px;
+  } 
+
+  .supply-apps-1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 40px 70px 40px 0px;
+    /* gap: 70px; */
+    width: 620px;
+    height: 600px;
+    background: #FFFFFF;
+  }
+
+  .supply-apps-content h1 {
+    width: 500px;
+    height: 54px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #001117;
+  }
+
+  .supply-apps-content p {
+    width: 500px;
+    height: 108px;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: #4E6269;
+  }
+
+  .supply-apps-content button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    gap: 10px;
+    width: 206px;
+    height: 64px;    
+    background: #05596B;
+    border-radius: 16px;
+    display: flex;
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: #FFFFFF;
+  } 
+
+  .supply-apps-img {
+    width: 620px; 
+    height: 600px;
+    left: 663px;
+    top: 130px;
+    background: #FAFAFA;
+    border-radius: 20px;
+    padding: 40px 70px 40px 0px;
+    position: absolute;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .supply-apps-img img {
+   margin: auto;
+  }
 
       /* products */
 
@@ -1974,9 +2070,68 @@ top: 277px;
         margin-bottom: 20px;
       }
 
+      .trust-img {
+        width: 943.42px;
+        height: 600px;  
+        align-items: center;
+        margin: auto;
+        margin-bottom: 20px;
+      }
+
+      .trust-btm {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+        padding: 0px;
+        gap: 136px;
+        width: 1240px;
+        height: 144px;
+        margin-top: 20px;
+        /* margin: 100px 100px; */
+        /* padding-left: 100px;
+        padding-right: 100px; */
+      }
+
+      .trust-btm-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 12px;
+        width: 221px;
+        height: 144px;
+      }
+
+      
+
+      .trust-btm-col h1 {
+        width: 180px;
+        height: 27px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 27px;        
+        color: #001117;
+      }
+
+      .trust-btm-col h3 {
+        width: 221px;
+        height: 57px;
+        font-family: 'Satoshi';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        color: #4E6269;
+      }
+
       .trust-innertext img {
         width: 6px;
         height: 102px;
+       
         }
 
 
