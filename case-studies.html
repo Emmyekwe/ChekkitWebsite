@@ -1,338 +1,518 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
+    <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Chekkit Technologies</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,401,901,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src='main.js'></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
-<body>  
-   <section>
-        <nav class="navbar">
-            <div class="logo">
-              <a href="index.html"> <img src="/public/assets/logo.svg" alt="logo" /> </a>
-            </div>
+<body class="bg-white">
+    <nav class=" bg-white shadow md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
+      <div class="flex justify-between items-center ">
+        <span class="md:shrink-0 text-2xl cursor-pointer m-2">
+                    <a href="index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
+                </span>
 
-            <div class="links">
-                <a href="/aboutus.html">About Us</a>
-                <div class="dropdown">
-                    <a class="dropbtn" href="/products.html">Products <i class="fa-solid fa-angle-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="/products/chekkitapp.html">ChekkitApp</a>
-                        <a href="#">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                        <a href="/products/traceability.html">Traceability</a>
-                        <a href="/products/consumer-intelligence.html">Consumer Intelligence <i class="fa-solid fa-angle-right"></i></a>
-                      </div>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                  </span>
                 </div>
+
+            <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-red-200 duration-500 " href="/aboutus.html">About Us</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-red-200 duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
+                                </li>
+                                <li>
+                                    <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                                </li>
+                                <li>
+                                    <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
+                                </li>
+                                <li>
+                                    <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
+                                </li>
+                            </ul>
+                         
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl hover:text-red-200 duration-500" href="./case-studies.html">Case Studies</a>
+                </li>
+                <!-- <div class="md:flex-col sm:flex-col my-2 gap-2"> -->
+                <li class="mx-4 my-6 md:my-0">
+                    <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Client Login</button>
+                    <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl">Request Demo</button>
+                </li>
+                    
+                <!-- </div> -->
                 
-                <a href="#">Case Studies</a>
-            </div>
+            </ul>  
+        </nav> 
 
-            <div class="buttons">
-                <button class="client">Client Login</button>
-                <button class="request">Request Demo</button>
-            </div>
-        </nav>
-   </section>  
 
-   <section class="case-hero">
         <div>
-            <img src="/public/assets/homescreen-img.svg" alt="home hero" />
+            <div class="h-96  relative">
+                <img class=" h-full object-cover absolute" src="/public/assets/homescreen-img.svg" alt="home hero" />
+            </div>
+            <div class="m-4 absolute top-1/4 lg:top-1/3 lg:mx-24 md:mx-24">
+                <h1 class="text-white font-bold sm:text-3xl md:text-4xl lg:text-5xl">Case Studies</h1>
+                <p class="text-slate-300 font-thin sm:text-[30px] mt-6">Check  out some solutions that have been deployed for some clients</p>
+            </div>
         </div>
-        <div class="case-content">
-            <h1>Case Studies</h1>
-            <p>Check  out some solutions that have been deployed for some clients</p>
-        </div>
-   </section>
 
-   <section class="case-study-hero">
-        <div>
-            <img  src="/public/assets/hands.svg" alt="Hands" />
+   <section class="flex flex-col  m-5 md:m-24 lg:m-24 md:flex-row lg:flex-row ">
+        <div class="md:w-1/2 lg:w-1/2">
+            <div>
+                <img class="h-full w-full object-cover"  src="/public/assets/hands.svg" alt="Hands" />
+            </div>
         </div>
-        <div class="case-study-content">
-            <div class="case-study-content-header">
+        <div class="relatve grid grid-flow-row gap-2 md:w-1/2 lg:w-1/2 bg-[#FAFAFA] md:p-5 lg:p-5  md:gap-1 lg:gap-1">
+            <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
                 <img  src="/public/assets/profile-pic.svg" alt="Hands" />
-                <h1>Amit Das</h1>
-                <span>.</span>
-                <p>4 days ago</p>
+                <h1 class="text-[#292929] text-xs md:text-xs lg:text-xs">Amit Das</h1>
+                <span class="mb-4 text-[#757575] text-3xl">.</span>
+                <p class="text-[#757575] text-xs md:text-xs lg:text-xs">4 days ago</p>
             </div>
-            <div class="case-study-text">
-                <h2>Unilevar : a UI UX case study</h2>
-                <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+            <div class="">
+                <h2 class="text-[#191919] text-xl md:text-3xl lg:text-3xl font-bold">Unilevar : a UI UX case study</h2>
+                <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
             </div>
-            <div class="case-study-footer">
-                <h2>UI ux Design</h2>
-                <p>3 min read</p>
+            <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                <p class="text-neutral-300 text-xs md:text-xs lg:text-xs font-light"></p>3 min read</p>
              </div>
-             <div class="read-case-study">
-                <p><a href="./reading-interface.html">read case study</a> </p>
-                <img  src="/public/assets/right-arrow.svg" alt="Arrow" />
+             <div class=" flex flex-row items-center md:flex-row gap-2 lg:flex-row md:gap-1 lg:gap-1 justify-self-end md:items-center lg:items-center">
+                <p class="capitalize  text-xs md:text-sm lg:text-sm text-[#05596B] font-bold"><a href="./reading-interface.html">read case study</a> </p>
+                <img width="50" height="50"  src="/public/assets/right-arrow.svg" alt="Arrow" />
              </div>
         </div>
    </section>
 
-   <section class="partner-brand">
-    <div class="partner-brand-content">
-        <h1>We work with the best partners</h1>
-        <img src="/public/assets/brands.svg" alt="Brands" />
+ 
+   <section  class="my-16 p-5 bg-[#F9FAFB] ">
+    <div class="md:p-8 lg:p-8 mx-auto">
+      
+        <div class="my-4" >
+            <h1 class="text-sm items-center text-center justify-items-center md:text-lg lg:text-lg leading-5 capitalize mx-auto">We work with the best partners</h1>
+        </div>
     </div>
+
+        <div class="grid grid-flow-row grid-cols-3 gap-4 md:flex-row lg:flex-row md:grid-flow-row lg:grid-flow-row md:gap-4 lg:gap-4 md:mx-24 lg:mx-24">
+            <div class="flex flex-col gap-2 md:flex-row lg-flex-row md:gap-4 lg:gap-4 ">
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/cdc.svg" alt="cdc" />
+                </div> 
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/nivea.svg" alt="nivea" />
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 md:flex-row lg-flex-row md:gap-4 lg:gap-4 ">
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/unilever.svg" alt="unilever" />
+
+                </div>
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/fmn.svg" alt="fmn" />
+
+                </div>
+            </div>
+            <div class="flex flex-col gap-2 md:flex-row lg-flex-row md:gap-4 lg:gap-4 ">
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/merck.svg" alt="merck" />
+
+                </div>
+                <div class=" border-2 border-[#96B3D5] p-2 rounded-2xl md:h-[117px] md:w-[177px]">
+                    <img class="mx-auto p-2" src="/public/assets/indomie.svg" alt="indomie" />
+                </div>
+            </div>
+        </div>
+   </section>
+
+
+    <!-- <section class="flex flex-col p-5">
+            <div class="flex flex-col gap-2">
+                    <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+                        <h1 class="text-[#292929] text-sm md:text-lg lg:text-lg">Amit Das</h1>
+                        <span class="mb-4 text-[#757575] text-3xl">.</span>
+                        <p class="text-[#757575] text-sm md:text-lg lg:text-lg">4 days ago</p>
+                    </div>
+                    <div class="w-full">
+                        <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                    </div>
+                    <div class="">
+                        <h2 class="text-[#191919] text-xl md:text-3xl lg:text-3xl font-bold">Unilevar : a UI UX case study</h2>
+                        <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                        <p class="text-neutral-300 text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                    </div>              
+            </div>
+            <div class="flex flex-col gap-2">
+                <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                    <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+                    <h1 class="text-[#292929] text-sm md:text-lg lg:text-lg">Amit Das</h1>
+                    <span class="mb-4 text-[#757575] text-3xl">.</span>
+                    <p class="text-[#757575] text-sm md:text-lg lg:text-lg">4 days ago</p>
+                </div>
+                <div class="w-full">
+                    <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                </div>
+                <div class="">
+                    <h2 class="text-[#191919] text-xl md:text-3xl lg:text-3xl font-bold">Unilevar : a UI UX case study</h2>
+                    <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                </div>
+                <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                    <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                    <p class="text-neutral-300 text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                </div>              
+        </div>
+        <div class="flex flex-col gap-2">
+            <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+                <h1 class="text-[#292929] text-sm md:text-lg lg:text-lg">Amit Das</h1>
+                <span class="mb-4 text-[#757575] text-3xl">.</span>
+                <p class="text-[#757575] text-sm md:text-lg lg:text-lg">4 days ago</p>
+            </div>
+            <div class="w-full">
+                <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+            </div>
+            <div class="">
+                <h2 class="text-[#191919] text-xl md:text-3xl lg:text-3xl font-bold">Unilevar : a UI UX case study</h2>
+                <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+            </div>
+            <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                <p class="text-neutral-300 text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+            </div>              
+    </div>
+    <div class="flex flex-col gap-2">
+        <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+            <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+            <h1 class="text-[#292929] text-sm md:text-lg lg:text-lg">Amit Das</h1>
+            <span class="mb-4 text-[#757575] text-3xl">.</span>
+            <p class="text-[#757575] text-sm md:text-lg lg:text-lg">4 days ago</p>
+        </div>
+        <div class="w-full">
+            <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+        </div>
+        <div class="">
+            <h2 class="text-[#191919] text-xl md:text-3xl lg:text-3xl font-bold">Unilevar : a UI UX case study</h2>
+            <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+        </div>
+        <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+            <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+            <p class="text-neutral-300 text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+        </div>              
+</div>
+    </section> -->
+    <section class="flex flex-col md:flex-row lg:flex-row md:px-24 lg:px-24 md:gap-8 lg:gap-8">
+        <div class="flex flex-col md:w-1/2 lg:w-1/2">
+            <div class="flex flex-col-reverse p-5 gap-2  md:flex-row lg:flex-row">
+                <div class="flex  flex-col gap-2 md:flex-col lg:flex-col md:gap-2 lg:gap-2">
+                    <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+                        <h1 class="text-[#292929] text-xs md:text-sm lg:text-sm">Amit Das</h1>
+                        <span class="mb-4 text-[#757575] text-3xl">.</span>
+                        <p class="text-[#757575] text-xs md:text-sm lg:text-sm">4 days ago</p>
+                    </div>
+                    
+                    <div class="">
+                        <h2 class="text-[#191919] text-lg md:text-2xl lg:text-2xl font-bold">Wellness app: a UI UX case study</h2>
+                        <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                        <p class="text-[#757575] text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                    </div>  
+                </div>
+                <div class="w-full ">
+                    <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                </div>            
+            </div>
+        </div>
+        <div class="flex flex-col md:w-1/2 lg:w-1/2">
+            <div class="flex flex-col-reverse p-5 gap-2  md:flex-row lg:flex-row">
+                <div class="flex  flex-col gap-2 md:flex-col lg:flex-col md:gap-2 lg:gap-2">
+                    <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <img  src="/public/assets/profile-pic.svg" alt="Hands" />
+                        <h1 class="text-[#292929] text-xs md:text-sm lg:text-sm">Amit Das</h1>
+                        <span class="mb-4 text-[#757575] text-3xl">.</span>
+                        <p class="text-[#757575] text-xs md:text-sm lg:text-sm">4 days ago</p>
+                    </div>
+                    
+                    <div class="">
+                        <h2 class="text-[#191919] text-lg md:text-2xl lg:text-2xl font-bold">Wellness app: a UI UX case study</h2>
+                        <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                    </div>
+                    <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                        <p class="text-[#757575] text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                    </div>  
+                </div>
+                <div class="w-full flex-col-reverse">
+                    <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                </div>            
+            </div>
+        </div>
     </section>
 
-
-    <section class="cases">
-        <div class="cases-content">
-            <div class="flex flex-row">
-                <div class="cases-content-wrapper">
-                    <div class="cases-header">
+    <section class="flex flex-col md:flex-row lg:flex-row md:px-24 lg:px-24 md:gap-8 lg:gap-8 md:my-12 lg:my-12">
+        <div class="flex flex-col md:w-1/2 lg:w-1/2">
+            <div class="flex flex-col-reverse p-5 gap-2  md:flex-row lg:flex-row">
+                <div class="flex  flex-col gap-2 md:flex-col lg:flex-col md:gap-2 lg:gap-2">
+                    <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
                         <img  src="/public/assets/profile-pic.svg" alt="Hands" />
-                        <h1>Amit Das</h1>
-                        <span>.</span>
-                        <p>4 days ago</p>
+                        <h1 class="text-[#292929] text-xs md:text-sm lg:text-sm">Amit Das</h1>
+                        <span class="mb-4 text-[#757575] text-3xl">.</span>
+                        <p class="text-[#757575] text-xs md:text-sm lg:text-sm">4 days ago</p>
                     </div>
-                    <div class="cases-text">
-                        <h2>Unilevar : a UI UX case study</h2>
-                        <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                    
+                    <div class="">
+                        <h2 class="text-[#191919] text-lg md:text-2xl lg:text-2xl font-bold">Wellness app: a UI UX case study</h2>
+                        <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
                     </div>
+                    <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                        <p class="text-[#757575] text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                    </div>  
                 </div>
-                <div class="cases-img">
-                    <img  src="/public/assets/hands-vertical.svg" alt="Hands" />
-                </div>
+                <div class="w-full ">
+                    <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                </div>            
             </div>
-            <div class="cases-footer">
-                    <h2>UI ux Design</h2>
-                    <p>3 min read</p>
-            </div>
-            <!-- <hr> -->
         </div>
-        <div class="cases-content">
-            <div class="flex flex-row">
-                <div class="cases-content-wrapper">
-                    <div class="cases-header">
+        <div class="flex flex-col md:w-1/2 lg:w-1/2">
+            <div class="flex flex-col-reverse p-5 gap-2  md:flex-row lg:flex-row">
+                <div class="flex  flex-col gap-2 md:flex-col lg:flex-col md:gap-2 lg:gap-2">
+                    <div class="flex flex-row items-center gap-2  md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
                         <img  src="/public/assets/profile-pic.svg" alt="Hands" />
-                        <h1>Amit Das</h1>
-                        <span>.</span>
-                        <p>4 days ago</p>
+                        <h1 class="text-[#292929] text-xs md:text-sm lg:text-sm">Amit Das</h1>
+                        <span class="mb-4 text-[#757575] text-3xl">.</span>
+                        <p class="text-[#757575] text-xs md:text-sm lg:text-sm">4 days ago</p>
                     </div>
-                    <div class="cases-text">
-                        <h2>Unilevar : a UI UX case study</h2>
-                        <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
+                    
+                    <div class="">
+                        <h2 class="text-[#191919] text-lg md:text-2xl lg:text-2xl font-bold">Wellness app: a UI UX case study</h2>
+                        <p class="text-[#292929] text-sm md:text-base lg:text-base font-thin">An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
                     </div>
+                    <div class="flex flex-row items-center gap-2 md:flex-row lg:flex-row md:gap-2 lg:gap-2 md:items-center lg:items-center">
+                        <p class="bg-[#F2F2F2] p-1 rounded-lg text-[#292929] text-xs md:text-sm lg:text-sm font-thin">UI ux Design</p>
+                        <p class="text-[#757575] text-xs md:text-xs lg:text-xs font-thin"></p>3 min read</p>
+                    </div>  
                 </div>
-                <div class="cases-img">
-                    <img  src="/public/assets/hands-vertical.svg" alt="Hands" />
-                </div>
+                <div class="w-full flex-col-reverse">
+                    <img  class="object-cover h-48 w-full" src="/public/assets/hands-vertical.svg" alt="Hands" />
+                </div>            
             </div>
-            <div class="cases-footer">
-                    <h2>UI ux Design</h2>
-                    <p>3 min read</p>
-            </div>
-            <!-- <hr> -->
-        </div>
-    </section>
-
-    <section class="cases">
-        <div class="cases-content">
-            <div class="flex flex-row">
-                <div class="cases-content-wrapper">
-                    <div class="cases-header">
-                        <img  src="/public/assets/profile-pic.svg" alt="Hands" />
-                        <h1>Amit Das</h1>
-                        <span>.</span>
-                        <p>4 days ago</p>
-                    </div>
-                    <div class="cases-text">
-                        <h2>Unilevar : a UI UX case study</h2>
-                        <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
-                    </div>
-                </div>
-                <div class="cases-img">
-                    <img  src="/public/assets/hands-vertical.svg" alt="Hands" />
-                </div>
-            </div>
-            <div class="cases-footer">
-                    <h2>UI ux Design</h2>
-                    <p>3 min read</p>
-            </div>
-            <!-- <hr> -->
-        </div>
-        <div class="cases-content">
-            <div class="flex flex-row">
-                <div class="cases-content-wrapper">
-                    <div class="cases-header">
-                        <img  src="/public/assets/profile-pic.svg" alt="Hands" />
-                        <h1>Amit Das</h1>
-                        <span>.</span>
-                        <p>4 days ago</p>
-                    </div>
-                    <div class="cases-text">
-                        <h2>Unilevar : a UI UX case study</h2>
-                        <p>An intense way to learn about the process and practice your designs skills — My 1st hackathon Hackathons eexperience as a junior UX designer. As my portfolio...</p>
-                    </div>
-                </div>
-                <div class="cases-img">
-                    <img  src="/public/assets/hands-vertical.svg" alt="Hands" />
-                </div>
-            </div>
-            <div class="cases-footer">
-                    <h2>UI ux Design</h2>
-                    <p>3 min read</p>
-            </div>
-            <!-- <hr> -->
         </div>
     </section>
 
-   <section class="test-container">
-    <div class="trust-wrapper">
-            <div class="trust">
-                <h1>testimonials</h1>
+   <section class="relative">
+    <div class="flex flex-col  m-5 md:m-24 lg:m-24 md:flex-col lg:flex-col">
+            <div class="">
+                <h1 class="text-[#46F7AD] text-xl md:text-xl lg:text-xl my-4 p-2 uppercase font-extrabold">testimonials</h1>
             </div>
-            <div class="trust-innertext">
+            <div class="flex flex-row gap-2 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+                <div class="md:mt-4 lg:mt-4">
+                    <img class="h-50 inline"  src="/public/assets/saber.svg" alt="Saber" />
+                </div>
                 <div>
-                    <img  src="/public/assets/saber.svg" alt="Saber" />
-                </div>
-                <div>
-                    <h3>Driving Blockchain Solutions  To Enhance Companies</h3>
+                    <h3 class="text-lg md:text-5xl lg:text-5xl font-bold">Driving Blockchain Solutions  To <br> Enhance Companies</h3>
                 </div>
             </div>
     </div>
-    <div class="test-col">
-            <div class="test-col-text">
+    <div class="flex flex-col gap-4 items-center justify-center md:justify-center lg:justify-center md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+            <div class="">
                 <img  src="/public/assets/man.svg" alt="man" />
-                <h1>bradley james</h1>
-                <p>CEO, Unilever</p>
+                <h1 class="text-[#153853] text-center md:text-xl lg:text-xl font-bold capitalize">bradley james</h1>
+                <p class="text-center md:text-base lg:text-base">CEO, Unilever</p>
             </div>
             <div>
-                <img  src="/public/assets/comments.svg" alt="Comments" />
+                <img class="hidden md:block lg:block"  src="/public/assets/comments.svg" alt="Comments" />
+                <img class="block md:hidden lg:hidden" src="/public/assets/comments-up.svg" alt="Comments" />
             </div>
     </div>
 </section>
 
-     <section class="top-footer-banner">
-                <div>
-                    <img src="/public/assets/footer-Banner.svg" alt="footer-Banner" />
-                </div>
-                <div class="top-footer-content">
-                    <div class="top-footer-content-text">
-                        <h1>protect your life</h1>
-                        <div class="top-footer-content-innertext">
-                            <div>
-                                <img src="/public/assets/saber.svg" alt="Saber" />
+      <section class="">
+            <div class="h-96 relative ">
+                <img class="h-full w-full object-cover absolute" src="/public/assets/footer-Banner.svg" alt="footer-Banner" />
+                <div class="absolute top-1 -mt-2 md:-mt-2 lg:-mt-2">
+                    <div class="flex flex-col md:flex-row lg:flex-row">
+                            <div class="flex flex-col p-5 lg:mx-24 md:mx-24 lg:mt-16 md:mt-16 mt-4 py-3">
+                                <h1 class="text-[#46F7AD] text-lg my-4 px-5 py-2 font-bold uppercase">protect your life</h1>    
+                                <div class="flex flex-row gap-2 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+                                    <img src="/public/assets/saber.svg" alt="Saber" />          
+                                    <h1 class="text-white gap-4 font-bold text-2xl md:text-4xl lg:text-4xl">Join The Fight Against Fake<br> Products</h1>
+                                </div> 
+                                <p class="text-slate-300 font-thin sm:text-[30px] md:text-lg lg:text-lg mt-6">Explore the anti-counterfei service or create a Chekkit account now and start verifying identity products. You can also contact us to provide consumer intelligence solution for your business.</p>
                             </div>
-                            <div>
-                                <h3>Join The Fight Against Fake Products</h3>
+                            <div class="flex flex-row gap-2 md:flex-row lg:flex-row lg:m-24 md:m-24">
+                                <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl capitalize">request demo </button>
+                                <button class="bg-transparent text-sm text-white border-2 border-white font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Talk To Us</button>
                             </div>
-                        </div>
-                        <p>Explore the anti-counterfei service or create a Chekkit account now and start verifying identity products. You can also contact us to provide consumer intelligence solution for your business.</p>
-                    </div>
-                    <div class="top-footer-content-button">
-                        <button class="request">Request Demo</button>
-                        <button class="talk">Talk to us</button>
                     </div>
                 </div>
-        </section>
+            </div>
+    </section>
  
   
-   <section class="traceabilityfooter-container">
-        <div class="aboutusfooter-wrapper">
-            <div class="chekkit-container1">
-                <div class="chekkit-footer">
-                    <div class="flex flex-col gap-4">
-                        <div>
-                    <p><span class="chekkit">Chekkit Technologies Corp.</span>  was founded in 2018 to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+        <section class="bg-[#03262E]">
+            <div class=" text-white shadow md:flex md:items-center md:justify-between md:px-24  md:py-5">
+                <div class="flex flex-col md:w-2/5 lg:w-2/5 gap-4 md:flex-col lg:flex-col md:grid-flow-row lg:grid-flow-row md:gap-4 lg:gap-4 md:mx-5 lg:mx-5">
+                        <div class="flex flex-col">
+                                <div>
+                                <p class="text-xs font-light tracking-wide my-6 p-2 lg:text-l md:text-l"><span class="text-[#46F7AD]">Chekkit Technologies Corp.</span>  was founded in 2018 to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+                                </div>
+                                <div class="flex flex-row gap-2 p-2">
+                                    <img src="/public/assets/Facebook.svg" alt="Facebook" />
+                                    <img src="/public/assets/IG.svg" alt="IG" />
+                                    <img src="/public/assets/Twitter.svg" alt="Twitter" />
+                                    <img src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
+                                </div>
+                        </div>
+                        <div class="">
+                            <div class="">
+                                <h1 class="text-[#46F7AD] text-xl my-4 p-2">Contact</h1>
+                            </div>
+                                <div class="">
+                                    <div class="flex flex-row gap-1 items-center p-2">
+                                        <div>
+                                            <img src="/public/assets/nigeria.svg" alt="nigeria" />
+                                        </div>
+                                        <div><p class="text-xs font-light tracking-wide my-1"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
+                                    </div>
+    
+                                    <div class="flex flex-row gap-1 items-center p-2">
+                                        <div>
+                                            <img src="/public/assets/usa.svg" alt="usa" />
+                                        </div>
+                                        <div><p class="text-xs font-light tracking-wide my-1">1305, W11th Street, TX 77008, USA</p></div>
+                                    </div>
+    
+                                    <div class="flex flex-row gap-1 items-center p-2">
+                                        <div>
+                                            <img src="/public/assets/email.svg" alt="email" />
+                                        </div>
+                                        <div><p class="text-xs font-light tracking-wide my-1">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
+                                    </div>
+                                    <div class="flex flex-row gap-1 items-center p-2">
+                                        <div>
+                                            <img src="/public/assets/phone.svg" alt="phone" /> </p>
+                                        </div>
+                                        <div><p class="text-xs font-light tracking-wide my-1">hello@chekkitapp.com</p></div>
+                                    </div>
+                                </div>
+                        </div>
+                </div>
+    
+            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-[#46F7AD] text-xl">Company</h1>
+                        <p class="text-xs font-light tracking-wide my-1">About Us</p>
+                        <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
+                        <p class="text-xs font-light tracking-wide my-1">Careers</p>
+                        <p class="text-xs font-light tracking-wide my-1">Awards</p>
+                </div>
+    
+                <div class="flex flex-col gap-2 md:my-4 lg:my-4">
+                    <h1 class="text-[#46F7AD] text-xl">Resources</h1>
+                    <p class="text-xs font-light tracking-wide my-1">Blog</p>
+                    <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
+                    <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
+                    <p class="text-xs font-light tracking-wide my-1">Help Center</p>
+                </div>
+            </div>
+    
+            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-24 lg:gap-24 md:mx-5 lg:mx-5 text-[#EEF9F8]">
+                <div class="flex flex-col gap-2 ">
+                    <h1 class="text-[#46F7AD] text-xl">Products</h1>
+                        <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
+                        <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
+                        <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
+                </div>
+    
+                <div class="flex flex-col gap-2 md:my-4 lg:my-4">
+                    <h1 class="text-[#46F7AD] text-xl">Community</h1>
+                        <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
+                        <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
+                </div>
+            </div>
+    
+            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
+                <div class="flex flex-col gap-2">
+                        <h1 class="text-[#46F7AD] text-xl">Solutions</h1>
+                        <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
+                        <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
+                        <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
+                        <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
                     </div>
-                    <div class="socials flex flex-row gap-2">
-                        <img src="/public/assets/Facebook.svg" alt="Facebook" />
-                        <img src="/public/assets/IG.svg" alt="IG" />
-                        <img src="/public/assets/Twitter.svg" alt="Twitter" />
-                        <img src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
+    
+                    <div class="flex flex-col gap-2 md:my-4 lg:my-4">
+                        <h1 class="text-[#46F7AD] text-xl">Download</h1>
+                            <p> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
+                            <p> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
+                    </div>
+            </div>
+        </div>
+    
+    
+            <!-- <hr class="h-px my-2 mx-2 md:mx-24 lg:mx-24 bg-[#EEF9F8] border-0  md:px-24 lg:px-24 md:my-6 lg:my-6 "> -->
+            <div class="bg-[#03262E] text-white">
+                <div class="flex flex-col gap-4 mx-auto md:flex-row text-center items-center justify-center p-5 md:justify-between lg:justify-between md:px-24  md:py-8 lg:px-24  lg:py-8">
+                    <div>
+                        <p class="text-xs font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-light tracking-wide">Made with ❤️  in Nigeria</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
                     </div>
                 </div>
-                </div>
             </div>
-            <div class="chekkit-container2">
-                <div class="chekkit-footer2">
-                    <h1>Contact</h1>
-                </div>
-                <div class="chekkit-contact2">
-                    <p>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/nigeria.svg" alt="nigeria" />  9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/usa.svg" alt="usa" />1305, W11th Street, TX 77008, USA.</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/email.svg" alt="email" />+234 (0) 813 849 1667 | +234 (0) 814 711 4822</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/phone.svg" alt="phone" />
-                     hello@chekkitapp.com </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="aboutusfooter-wrapper2">
-            <div class="flex flex-row space-x-20">
-                <div class="chekkit-container-company">
-                    <h1>Company</h1>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                    <p>Careers</p>
-                    <p>Awards</p>
-                </div>
-                <div class="chekkit-container-products">
-                    <h1>Products</h1>
-                <p>ChekkitApp</p>
-                <p>Consumer Intelligence</p>
-                <p>Chekkit USSD</p>
-                </div>
-                <div class="chekkit-container-solutions">
-                    <h1>Solutions</h1>
-                <p>Consumer Loyalty</p>
-                <p>Retailer Loyalty</p>
-                <p>Supply Chain </p>
-                <p>Anti-Counterfeiting </p>
-                </div>
-            </div>
-            <div class="flex flex-row  space-x-20 gap-2">
-                <div class="chekkit-container-resources">
-                    <h1>Resources</h1>
-                        <p>Blog</p>
-                        <p>Case Studies</p>
-                        <p>Learning Portal</p>
-                        <p>Help Center</p>
-                </div>
-                <div class="chekkit-container-community">
-                    <h1>Community</h1>
-                        <p>COVID-19</p>
-                        <p>CSR Activities</p>
-                </div>
-                <div class="chekkit-container-download">
-                    <h1>Download</h1>
-                    <div class="flex flex-col gap-2">
-                        <p> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
-                        <p> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
-                    </div>   
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="about-footer-container">
-            <div class="footer-wrapper-about">
-                <div>
-                    <p>© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
-                </div>
-                <div>
-                    <p>Made with ❤️  in Nigeria</p>
-                </div>
-                <div>
-                    <p>Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
-                </div>
-            </div>
-        </div>
-        
-   </section>
-</body>
-</html>
+       </section> 
+    
+       <!-- <section class="p-4 ">
+        <div class="md:p-24 lg:p-24"> -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script> 
+    </body>
+     <script>
+        function Menu(e) {
+        let list = document.querySelector('ul');
+    
+        e.menu === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+    
+        function scrolll() {
+            var left = document.querySelector(".scroll-images")
+            left.scrollBy(350, 0)
+        }
+        function scrollr() {
+            var right = document.querySelector(".scroll-images")
+            right.scrollBy(-350, 0)
+        }
+    
+    
+        function Menu(e){
+          let list = document.querySelector('ul');
+          e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+        }
+      </script>
+    </html> 

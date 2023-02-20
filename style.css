@@ -1,11 +1,12 @@
-/*
-! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
-*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('/public/fonts/Satoshi-Italic.ttf');
+}
+
 
 *,
 ::before,
@@ -56,7 +57,7 @@ html {
 
 body {
   margin: 0;
-  /* 1 */
+  font-family: 'Satoshi', sans-serif;  
   line-height: inherit;
   font-family: 'Satoshi'
 }
@@ -513,6 +514,16 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -626,16 +637,15 @@ video {
   top: 30px;
 }
 
-.case-content h1 {
-  /* width: 800px; */
-  /* height: 81px; */
+/* .case-content h1 {
+ 
   font-family: 'Satoshi';
   font-style: normal;
   font-weight: 900;
   font-size: 60px;
   line-height: 81px;
   color: #FFFFFF;
-}
+} */
 
 
 .case-content p {
@@ -1048,17 +1058,57 @@ color: #292929;
   width: 150px;
 }
 
-.scroll-images {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  overflow: auto;
-  position: relative;
-  scroll-behavior: smooth;
-  gap: 50px;
+
+@media (max-width: 1440px) {
+  .scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    /* white-space: nowrap; */
+        position: relative;
+    scroll-behavior: smooth;
+    gap: 50px;
+  }
 }
+
+
+@media (max-width: 976px) {
+  .scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    /* white-space: nowrap; */
+        position: relative;
+    scroll-behavior: smooth;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-images {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    overflow: auto;
+    /* white-space: nowrap; */
+        position: relative;
+    scroll-behavior: smooth;
+    gap: 50px;
+  }
+}
+
+ 
 
 /* .product-wrapper button {
   background: red;
@@ -1152,7 +1202,7 @@ color: #fff !important;
 
 #marquee .industry-container {
   display: flex;
-  animation: marquee 10s infinite linear;
+  /* animation: marquee 10s infinite linear; */
   flex-direction: row;
    align-items: flex-start;
    padding: 0px;
@@ -1597,17 +1647,6 @@ color: #fff !important;
 }
 
 
-@media (max-width: 1024px) {
-  #marquee .partner-container .partner {
-    flex-basis: 25%;
-  }
-}
-
-@media (max-width: 760px) {
-  #marquee .partner-container .partner {
-    flex-basis: 33.3%;
-  }
-}
 
 @keyframes marquee {
   0% {
