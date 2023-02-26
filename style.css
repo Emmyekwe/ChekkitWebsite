@@ -4,7 +4,12 @@
 
 @font-face {
   font-family: 'Satoshi-Regular';
-  src: url('/public/fonts/Satoshi-Italic.ttf');
+  src: url('/public/fonts/Satoshi-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Athletics-Regular';
+  src: url('/public/fonts/Athletic.TTF');
 }
 
 
@@ -512,6 +517,12 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    width: 600px;
+  }
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -1182,14 +1193,6 @@ color: #fff !important;
   color: #4E6269;
 }
 
-.brands-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 16px;
-  /* width: 100%; */
-}
 
 .industry-container{
   display: flex;
@@ -1201,62 +1204,18 @@ color: #fff !important;
 }
 
 #marquee .industry-container {
-  display: flex;
+  display: flex; 
   /* animation: marquee 10s infinite linear; */
   flex-direction: row;
-   align-items: flex-start;
+   align-items: flex-start; 
    padding: 0px;
    gap: 31px;
    margin-top: 50px;
 }
 
-.brands {
-  padding: 16px;
-  gap: 10px;
-  background: #E5EEF0;
-  border-radius: 100px;
-  margin-bottom: 16px;
-  align-items: center;
-  justify-content: center;
-}
-
-.brands p {
-  font-style: normal;
-  font-weight: 900;
-  font-size: 14px;
-  line-height: 19px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #153853;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-#marquee .brands-container {
-  display: flex;
-  animation: marquee 10s infinite linear;
-  flex-direction: row;
-   align-items: flex-start;
-   padding: 0px;
-   gap: 31px;
-   margin-top: 50px;
-}
-
-.brands-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 30px;
-  width: 100%;
-  overflow-x: hidden;
-  cursor: pointer;
-}
 
 .brands-info {
-  flex-basis: 28%;
+  /* flex-basis: 28%; */
   flex-shrink: 0;
   box-sizing: border-box;
   display: flex;
@@ -1264,8 +1223,9 @@ color: #fff !important;
   justify-content: center;
   align-items: center;
   padding: 10px 30px 10px 10px;
-  gap: 24px;
   height: 100px;
+  width: 200px;
+  width: auto;
   background: #FFFFFF;
   box-shadow: 0px 0px 50px rgba(151, 151, 151, 0.12);
   border-radius: 100px;
@@ -1278,7 +1238,6 @@ color: #fff !important;
   font-size: 18px;
   line-height: 21px;
   text-transform: capitalize;
-  color: #242424;
 }
 
 .press-container {
@@ -1801,14 +1760,6 @@ span .heart {
     height: 27.49px;
    }
 
-   hr {
-    position: absolute;
-    width: 1240px;
-    height: 0;
-    top: 20px;
-    margin-top: 480px;
-    border: 0.25px solid #CBF7F3;
-   }
 
    .chekkit-container1 {
     display: flex;

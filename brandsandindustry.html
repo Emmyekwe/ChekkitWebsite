@@ -7,430 +7,364 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <link rel='stylesheet' href='style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,401,901,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ 
 </head>
 <body class="bg-white">
-    <nav class=" bg-white shadow md:flex md:items-center md:justify-between md:px-24  md:py-5 ">
-      <div class="flex justify-between items-center ">
-        <span class="text-2xl cursor-pointer m-2">
-                    <a href="index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
-                </span>
-
-                <span class="text-3xl cursor-pointer mx-2 md:hidden block">
-                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+    <nav class=" bg-white  md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
+        <div class="flex justify-between items-center ">
+          <span class="md:shrink-0 text-2xl cursor-pointer m-2">
+                      <a href="/index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
                   </span>
-                </div>
+  
+                  <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                    </span>
+                  </div>
+  
+              <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500 " href="/aboutus.html">About Us</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                  <li>
+                                      <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
+                                  </li>
+                                  <li>
+                                      <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                                  </li>
+                                  <li>
+                                      <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
+                                  </li>
+                                  <li>
+                                      <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
+                                  </li>
+                              </ul>
+                           
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500" href="/case-studies.html">Case Studies</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-white hover:bg-[#05596b] rounded-2xl">Client Login</button>
+                      <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-[#46F7AD] rounded-2xl">Request Demo</button>
+                  </li>
+                                      
+              </ul>  
+          </nav>  
 
-            <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500 " href="/aboutus.html">About Us</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <div class="dropdown">
-                        <a class="dropbtn text-xl hover:text-red-200 duration-500" href="/products.html">Products <i class="fa-solid fa-angle-down"></i></a>
-                        <!-- <div class="dropdown-content">
-                            <a class="text-xl hover:text-red-200 duration-500" href="/products/chekkitapp.html">ChekkitApp</a>
-                            <a href="#">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                            <a class="text-xl hover:text-red-200 duration-500" href="/products/traceability.html">Traceability</a>
-                            <a class="text-xl hover:text-red-200 duration-500" href="/products/consumer-intelligence.html">Consumer Intelligence <i class="fa-solid fa-angle-right"></i></a>
-                        </div>              -->
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500" href="./case-studies.html">Case Studies</a>
-                </li>
-                <!-- <div class="md:flex-col sm:flex-col my-2 gap-2"> -->
-                <li class="mx-4 my-6 md:my-0">
-                    <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Client Login</button>
-                    <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl">Request Demo</button>
-                </li>
-                    
-                <!-- </div> -->
-                
-            </ul>  
-        </nav>
+
         <div>
-            <div class="h-96  relative">
-                <img class=" h-full object-cover absolute" src="/public/assets/homescreen-img.svg" alt="home hero" />
+            <div class="h-96 relative">
+                <img class="h-full w-full object-cover absolute" src="/public/assets/homescreen-img.svg" alt="home hero" />
             </div>
-            <div class="m-4 absolute top-1/4 lg:top-1/3 lg:mx-24 md:mx-24">
-                <h1 class="text-white font-bold sm:text-3xl md:text-4xl lg:text-5xl">A World Class Technology<br> Company</h1>
-                <p class="text-slate-300 font-thin sm:text-[30px] mt-6">Check  out some solutions that have been deployed for some clients</p>
-            </div>
-        </div>
-
-
-
-        <section id="marquee" class="industry-container my-12 ">
-            <div class="flex flex-col md:p-24 lg:p-24 mx-auto">
-                <div class="bg-[#E5EEF0] p-2 rounded-full h-10 w-52 mx-auto">
-                    <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853]"><a href="./brandsandindustry.html">BRANDS AND INDUSTRIES</a></p>
-                </div>
-                <div class="" >
-                    <h1 class="text-sm items-center text-center md:p-4 lg:p-4 justify-items-center lg:text-3xl font-bold leading-5 capitalize mx-auto">Chekkit is built for different industries </h1>
-                </div>
-            </div>
-            <div class="brands-wrapper">
-                <div class="brands-container"> 
-                    <div class="brands-info">
-                        <div>
-                            <img src="/public/assets/automobile.svg" alt="Consumer" />
-                        </div>
-                        <div class="brands-text">
-                            <h1>Consumer Packaged Goods</h1>
-                        </div>
-                    </div>
-                    <div class="brands-info">
-                        <div>
-                            <img src="/public/assets/automobile.svg" alt="automobile" />
-                        </div>
-                        <div class="brands-text">
-                            <h1>Automobile</h1>
-                        </div>
-                    </div>
-                    <div class="brands-info">
-                        <div>
-                            <img src="/public/assets/wine.svg" alt="wine" />
-                        </div>
-                        <div class="brands-text">
-                            <h1>Wines & Spirit</h1>
-                        </div>
-                    </div>
-                    <div class="brands-info">
-                        <div>
-                            <img src="/public/assets/agriculture.svg" alt="Agriculture" />
-                        </div>
-                        <div class="brands-text">
-                            <h1>Agriculture</h1>
-                        </div>
-                    </div>
-                    <div class="brands-info">
-                        <div>
-                            <img src="/public/assets/fashion.svg" alt="Fashion" />
-                        </div>
-                        <div class="brands-text">
-                            <h1>Fashion and Luxury</h1>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> 
-
-   <section class="flex flex-col my-12 m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-        <div class="p-5 md:w-2/5 lg:w-2/5 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center items-center md:flex-start md:text-left">
-            <div class="bg-[#E5EEF0] p-2 rounded-full h-10 w-52 md:mx-auto lg:mx-auto">
-                <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">why choose us</p>
-            </div>
-            <div class="" >
-                <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">Amazing metric in the wine & spirit industry
-                </h1>
-                <p class="text-xs text-neutral-400 tracking-wide items-center text-center justify-items-center md:text-2xl lg:text-2xl  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-            </div>
-        </div>
-        <div class="m-5 md:w-3/5 lg:w-3/5">
-            <img src="/public/assets/metric.svg" alt="metric" class="w-full" />
-        </div> 
-   </section>
-
-   <section class="flex flex-col mx-auto my-12 m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-    <div class="p-5 md:w-1/2 lg:w-1/2 md:p-5 lg:p-5 flex flex-col justify-center items-center md:flex-start md:text-left lg:flex-start lg:text-left">
-        <div class="mx-auto bg-[#E5EEF0] p-2 rounded-full h-10 w-28 md:flex-start md:text-left lg:flex-start lg:text-left">
-            <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase ">BENEFITS</p>
-        </div>
-        <div class="my-5 flex flex-col gap-4" >
-            <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">benefits chekkit offers this industry
-            </h1>
-            <p class="text-xs text-neutral-400 tracking-wide items-center text-center justify-items-center md:text-2xl lg:text-2xl  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-        </div>
-        <div class="flex flex-col justify-center items-center gap-2 mx-auto my-5">
-            <div class="flex flex-col gap-2 mx-auto md:flex-row lg:flex-row ">
-                <div class=""> 
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                </div>
-                <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row ">
-                <div class="">
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                </div>
-                <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row ">
-                <div class="">
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                </div>
-                <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
+            <div class="px-[16px] absolute inset-y-0 left-0 mt-32 md:mt-12 md:top-1/4  md:mx-24">
+                <h1 class="text-white font-black text-[36px] md:text-[48px]">A World Class Technology<br> Company</h1>
+                <p class="text-white text-[14px] font-thin md:text-[16px] mt-6 md:mt-2">Check  out some solutions that have been deployed for some clients</p>
             </div>
         </div>
 
+
+            <!-- BRANDS AND INDUSTRIES -->
+            <section class="mx-[16px] mt-[80px] ">
+                <div class="mb-[24px] mx-auto md:mb-[50px]">
+                    <div class="bg-[#E5EEF0] h-[32px] p-[8px] w-[192px] text-center rounded-[100px] md:w-[238px] md:h-[51px] md:p-[16px] mx-auto">
+                        <p class="text-[12px] tracking-wide font-black text-center  text-[#153853] md:text-[14px]"><a href="./brandsandindustry.html">BRANDS AND INDUSTRIES</a></p>
+                    </div>
+                    <div class="" >
+                        <h1 class="text-[16px] mt-[16px] md:text-[36px] font-bold items-center tracking-wide text-center justify-items-center leading-10 capitalize mx-auto">Chekkit is built for different industries </h1>
+                    </div>
+                </div>
         
-    </div>
-    <div class="m-5 md:w-1/2 lg:w-1/2">
-        <img src="/public/assets/benefits.svg" alt="metric" />
-        <div class="flex flex-col justify-center items-center gap-2 mx-auto my-12">
-            <!-- <div class="flex flex-col gap-2 mx-auto md:flex-row lg:flex-row ">
-                <div class=""> 
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                <div >
+                    <div class="hidden">
+                        <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left"></i></button>
+                    </div>
+                    <div  class="flex  flex-col md:flex-row md:overflow-x-auto">
+                        <div class="flex overflow-x-scroll scrollbar-hide" >
+                                <div class="flex flex-row flex-nowrap">
+                                    <div class="brands-info flex flex-row gap-x-[8px] md:flex-row md:gap-x-6   mx-4 hover:bg-[#05596B] hover:text-white">
+                                        <div>
+                                            <img src="/public/assets/automobile.svg" alt="Consumer" />
+                                        </div>
+                                        <div class="brands-text">
+                                            <h1>Consumer Packaged Goods</h1>
+                                        </div>
+                                    </div>
+                                    <div class="brands-info flex flex-row gap-x-[8px] md:flex-row md:gap-x-6   mx-4 hover:bg-[#05596B] hover:text-white">
+                                        <div>
+                                            <img src="/public/assets/automobile.svg" alt="automobile" />
+                                        </div>
+                                        <div class="brands-text">
+                                            <h1>Automobile</h1>
+                                        </div>
+                                    </div>
+                                    <div class="brands-info flex flex-row gap-x-[8px] md:flex-row md:gap-x-6   mx-4 hover:bg-[#05596B] hover:text-white">
+                                        <div>
+                                            <img src="/public/assets/wine.svg" alt="wine" />
+                                        </div>
+                                        <div class="brands-text">
+                                            <h1>Wines & Spirit</h1>
+                                        </div>
+                                    </div>
+                                    <div class="brands-info flex flex-row gap-x-[8px] md:flex-row md:gap-x-6   mx-4 hover:bg-[#05596B] hover:text-white">
+                                        <div>
+                                            <img src="/public/assets/agriculture.svg" alt="Agriculture" />
+                                        </div>
+                                        <div class="brands-text">
+                                            <h1>Agriculture</h1>
+                                        </div>
+                                    </div>
+                                    <div class="brands-info flex flex-row gap-x-[8px] md:flex-row md:gap-x-6   mx-4 hover:bg-[#05596B] hover:text-white">
+                                        <div>
+                                            <img src="/public/assets/fashion.svg" alt="Fashion" />
+                                        </div>
+                                        <div class="brands-text">
+                                            <h1>Fashion and Luxury</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>     
+                    <div class="hidden">
+                        <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right"></i></button>
+                    </div>    
+                </div>
+            </section> 
+        
+        <!-- CHOOSE -->
+        <section class="mx-[16px] mt-[80px] md:mt-[150px] md:mx-[100px]">
+            <div class="flex flex-col md:flex-row md:justify-items-center md:items-center">
+                <div class=" md:w-[545px]">
+                    <div class="p-[8px] bg-[#E5EEF0] text-center w-[133px] h-[32px] md:w-[168px] md:h-[51px] md:p-[16px] rounded-[100px]">
+                        <p class="font-bold md:font-black text-[12px] md:text-[14px] uppercase">why choose us</p>
+                    </div>
+                    <div class="mt-[16px] md:mt-[12px]" >
+                        <h1 class="text-[#2E3B41] text-[16px] font-black md:text-[36px] capitalize">A World Class Technology Company.</h1>
+                        <p class="text-[12px] font-normal mt-[24px] md:text-[14px]">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
+                    </div>
                 </div>
                 <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
-            </div> -->
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row ">
-                <div class="">
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                </div>
-                <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
+                    <img src="/public/assets/metric.svg" alt="metric" class="object-cover" />
+                </div> 
             </div>
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row ">
-                <div class="">
-                    <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                </div>
-                <div class="">
-                    <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">Ship</h1>
-                    <p class="text-neutral-400 font-light text-xs lg:text-xs md:text-xs">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                </div>
-            </div>
-        </div>
-    </div> 
-</section>
+        </section>
 
-   <!-- <section class="">
-    <div class="media-wrapper">
-            <div class="media-col">
-                <div class="press">
-                    <p> <a href="/src/pages/aboutus.html">why choose us</a></p>
-                </div>
-                <h1 class="media-brand-h">
-                    Amazing metric in the wine & spirit industry
-                </h1>
-                <p  class="media-brand-p">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-            </div>
-            <div class="media-col2">
-                <img src="/public/assets/metric.svg" alt="metric" />
-            </div>
-    </div>
-   </section> -->
+     <!-- BENEFITS -->
+     <section class="my-[80px] mx-[16px] md:my-[150px] md:mx-[100px]">
+        <div class="my-[50px] md:my-[100px]">
+        <div class="flex flex-col md:flex-row lg:flex-row">
 
+        <div class="flex flex-col  md:w-1/2 md:flex-start md:text-left">
+            <div class="bg-[#E5EEF0] mb-[16px] p-[8px] w-[125px] h-[32px]  md:w-[159px] md:h-[52px] md:p-[16px] rounded-[100px]">
+                <p class="text-[12px] tracking-wide font-black text-center uppercase text-[#153853] md:text-[14px]">benefits</p>
+            </div>
+            <div class="md:mb-[50px] md:w-[560px] md:mt-[10px]" >
+                <h1 class="text-[#001117] font-bold text-[16px] md:text-[48px]  capitalize">benefits chekkit offers this industry</h1>
+            </div>
 
-   <!-- <section class="benefit-container">
-    <div class="benefit-wrapper">
-            <div class="media-col">
-                <div class="benefits">
-                    <p>benefits</p>
-                </div>
-                <h1>
-                    benefits chekkit offers this industry
-                </h1>
-                <p class="benefit-p">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-               <div class="ship-wrapper">
-                    <div class="ship-unit">
-                        <div class="ship-img">
-                            <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                        </div>
-                        <div class="ship-text">
-                            <h1>Ship</h1>
-                            <p>Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                        </div>
+            <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-row gap-x-4 mt-[30px] mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                    <div class=""> 
+                        <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
                     </div>
-                    <div class="ship-unit">
-                        <div class="ship-img">
-                            <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                        </div>
-                        <div class="ship-text">
-                            <h1>Ship</h1>
-                            <p>Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                        </div>
-                    </div>
-                    <div class="ship-unit">
-                        <div class="ship-img">
-                            <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                        </div>
-                        <div class="ship-text">
-                            <h1>Ship</h1>
-                            <p>Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                        </div>
-                    </div>
-               </div>
-            </div>
-            <div class="benefit-col2">
-                <div class="benefit-svg">
-                    <img src="/public/assets/benefits.svg" alt="benefits" />
-                </div>
-                <div class="benefit-col2-unit">
-                    <div class="ship-unit">
-                        <div class="ship-img">
-                            <img height="327" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                        </div>
-                        <div class="ship-text">
-                            <h1>Ship</h1>
-                            <p>Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                        </div>
-                    </div>
-                    <div class="ship-unit">
-                        <div class="ship-img">
-                            <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                        </div>
-                        <div class="ship-text">
-                            <h1>Ship</h1>
-                            <p>Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </div>
-   </section>
-   <section class="footer-container">
-        <div class="footer-wrapper">
-            <div>
-                <p>© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
-            </div>
-            <div>
-                <p>Made with ❤️  in Nigeria</p>
-            </div>
-            <div>
-                <p>Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
-            </div>
-        </div>
-   </section> -->
-
-   <section class="bg-[#1B1C31]">
-    <div class=" text-white shadow md:flex md:items-center md:justify-between md:px-24  md:py-5">
-        <div class="flex flex-col md:w-2/5 lg:w-2/5 gap-4 md:flex-col lg:flex-col md:grid-flow-row lg:grid-flow-row md:gap-4 lg:gap-4 md:mx-5 lg:mx-5">
-                <div class="flex flex-col">
-                        <div>
-                        <p class="text-xs font-light tracking-wide my-6 p-2 lg:text-l md:text-l"><span class="text-[#46F7AD]">Chekkit Technologies Corp.</span>  was founded in 2018 to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
-                        </div>
-                        <div class="flex flex-row gap-2 p-2">
-                            <img src="/public/assets/Facebook.svg" alt="Facebook" />
-                            <img src="/public/assets/IG.svg" alt="IG" />
-                            <img src="/public/assets/Twitter.svg" alt="Twitter" />
-                            <img src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
-                        </div>
-                </div>
-                <div class="">
                     <div class="">
-                        <h1 class="text-[#46F7AD] text-xl my-4 p-2">Contact</h1>
+                        <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Ship</h1>
+                        <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
                     </div>
-                        <div class="">
-                            <div class="flex flex-row gap-1 items-center p-2">
-                                <div>
-                                    <img src="/public/assets/nigeria.svg" alt="nigeria" />
-                                </div>
-                                <div><p class="text-xs font-light tracking-wide my-1"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
-                            </div>
+                </div>
 
-                            <div class="flex flex-row gap-1 items-center p-2">
-                                <div>
-                                    <img src="/public/assets/usa.svg" alt="usa" />
-                                </div>
-                                <div><p class="text-xs font-light tracking-wide my-1">1305, W11th Street, TX 77008, USA</p></div>
-                            </div>
+                <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                    <div class=""> 
+                        <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                        <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-[14px]">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                    </div>
+                </div>
 
-                            <div class="flex flex-row gap-1 items-center p-2">
-                                <div>
-                                    <img src="/public/assets/email.svg" alt="email" />
-                                </div>
-                                <div><p class="text-xs font-light tracking-wide my-1">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
+                <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center ">
+                    <div class=""> 
+                        <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                        <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-[14px]">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                    </div>
+                </div>
+            </div>        
+        </div>
+
+        <div class="flex flex-col md:w-1/2 lg:w-1/2 md:ml-[100px]">
+            <div class="">
+                <img class="" src="/public/assets/engage-pic.svg" alt="Engage" />
+            </div>
+
+            <div class="flex flex-col mt-[30px] justify-center items-center gap-2 md:mt-[50px]">
+                <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                    <div class=""> 
+                        <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Ship</h1>
+                        <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                    <div class=""> 
+                        <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                    </div>
+                    <div class="">
+                        <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                        <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</div> 
+       
+</div>
+    </section>
+
+            <!-- FOOTER -->
+            <section class="bg-[#03262E]">
+                <div class=" text-[#EEF9F8] px-[16px] pt-[50px] grid md:grid-cols-2 md:pt-[60px] md:px-[130px]">
+                    <div class="flex flex-col md:pr-[260px]">
+                            <div class="flex flex-col">
+                                    <p class="font-light md:text-[14px] tracking-wide"><span class="text-[#46F7AD] font-medium md:text-[16px]">Chekkit Technologies Corp.</span>  was founded in 2018  to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+                                    </div>
+                                    <div class="flex flex-row mt-[24px]">
+                                        <img src="/public/assets/Facebook.svg" alt="Facebook" />
+                                        <img class="mx-2.5" src="/public/assets/IG.svg" alt="IG" />
+                                        <img class="" src="/public/assets/Twitter.svg" alt="Twitter" />
+                                        <img class="mx-2.5" src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
                             </div>
-                            <div class="flex flex-row gap-1 items-center p-2">
-                                <div>
-                                    <img src="/public/assets/phone.svg" alt="phone" /> </p>
+                            <div class="mt-[24px] md:mt-[45px]">
+                                <div class="mb-[5px] md:mb-[12px]">
+                                    <h1 class="text-[#46F7AD] font-medium md:text-[16px]">Contact</h1>
                                 </div>
-                                <div><p class="text-xs font-light tracking-wide my-1">hello@chekkitapp.com</p></div>
+                                    <div class="">
+                                        <div class="mb-[20px] md:mb-[38px]">
+                                            <div class="flex flex-row mb-[6px] items-center md:gap-x-2 md:mb-[12px] ">
+                                                <div>
+                                                    <img src="/public/assets/nigeria.svg" alt="nigeria" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide md:text-[14px]"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
+                                            </div>
+            
+                                            <div class="flex flex-row items-center md:gap-x-2">
+                                                <div>
+                                                    <img src="/public/assets/usa.svg" alt="usa" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide  md:text-[14px]">1305, W11th Street, TX 77008, USA</p></div>
+                                            </div>
+                                        </div>
+        
+                                        <div>
+                                            <div class="flex flex-row mb-[6px]  items-center md:gap-x-2 md:mb-[12px] ">
+                                                <div>
+                                                    <img src="/public/assets/email.svg" alt="email" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
+                                            </div>
+                                            <div class="flex flex-row items-center md:gap-x-2">
+                                                <div>
+                                                    <img src="/public/assets/phone.svg" alt="phone" /> </p>
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">hello@chekkitapp.com</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+        
+                    <div class="flex flex-row mt-[24px] md:mt-0 md:flex-col">
+                        <div class="flex flex-col md:flex-row  text-[#EEF9F8]">
+                            <div class="flex flex-col mr-[150px] md:mr-0 ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Company</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">About Us</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Careers</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Awards</p>
+                            </div>
+                            <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px] ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Products</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
+                            </div>
+                            <div class="flex flex-col mt-[24px] md:mt-0">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Solutions</h1>
+                                <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
+                                <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
+                                <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
+                                <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
+                            </div>
+                
+                           
+                        </div>
+                
+                        <div class="flex flex-col md:flex-row md:mt-[45px]  text-[#EEF9F8]">
+                            <div class="flex flex-col ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Resources</h1>
+                                <p class="text-xs font-light tracking-wide my-1">Blog</p>
+                                <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
+                                <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
+                                <p class="text-xs font-light tracking-wide my-1">Help Center</p>
+                            </div>
+                
+                            <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px]">
+                                <h1 class="text-[#46F7AD] font-medium  mb-[5px] md:mb-[12px] md:text-[16px]">Community</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
+                                    <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
+                            </div>
+                            <div class="flex flex-col mt-[50px] md:mt-0">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Download</h1>
+                                    <p class="my-1"> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
+                                    <p class="my-1"> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
                             </div>
                         </div>
+                
+                        <div class="flex flex-row  text-[#EEF9F8]">
+                            
+                
+                               
+                        </div>
+                    </div>
                 </div>
-        </div>
 
-    <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-        <div class="flex flex-col gap-2">
-            <h1 class="text-[#46F7AD] text-xl">Company</h1>
-                <p class="text-xs font-light tracking-wide my-1">About Us</p>
-                <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
-                <p class="text-xs font-light tracking-wide my-1">Careers</p>
-                <p class="text-xs font-light tracking-wide my-1">Awards</p>
-        </div>
-
-        <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-            <h1 class="text-[#46F7AD] text-xl">Resources</h1>
-            <p class="text-xs font-light tracking-wide my-1">Blog</p>
-            <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
-            <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
-            <p class="text-xs font-light tracking-wide my-1">Help Center</p>
-        </div>
-    </div>
-
-    <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-24 lg:gap-24 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-        <div class="flex flex-col gap-2 ">
-            <h1 class="text-[#46F7AD] text-xl">Products</h1>
-                <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
-                <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
-                <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
-        </div>
-
-        <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-            <h1 class="text-[#46F7AD] text-xl">Community</h1>
-                <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
-                <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
-        </div>
-    </div>
-
-    <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-        <div class="flex flex-col gap-2">
-                <h1 class="text-[#46F7AD] text-xl">Solutions</h1>
-                <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
-                <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
-                <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
-                <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
-            </div>
-
-            <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-                <h1 class="text-[#46F7AD] text-xl">Download</h1>
-                    <p> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
-                    <p> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
-            </div>
-    </div>
-</div>
+                <div class="mx-[16px] md:mx-[100px]">
+                    <hr class="h-px my-[30px] border-[0.25px] bg-[#CBF7F3]">
+                </div>
 
 
-    <!-- <hr class="h-px my-2 mx-2 md:mx-24 lg:mx-24 bg-[#EEF9F8] border-0  md:px-24 lg:px-24 md:my-6 lg:my-6 "> -->
-    <div class="bg-[#1B1C31] text-white">
-        <div class="flex flex-col gap-4 mx-auto md:flex-row text-center items-center justify-center p-5 md:justify-between lg:justify-between md:px-24  md:py-8 lg:px-24  lg:py-8">
-            <div>
-                <p class="text-xs font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
-            </div>
-            <div>
-                <p class="text-xs font-light tracking-wide">Made with ❤️  in Nigeria</p>
-            </div>
-            <div>
-                <p class="text-xs font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
+        <div class="bg-[#03262E] text-[#EEF9F8]">
+            <div class="flex flex-col mx-auto md:flex-row text-center items-center justify-center md:mx-[100px] md:justify-between md:pb-[50px]">
+                <div class="mb-[24px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
+                </div>
+                <div class="mb-[24px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">Made with ❤️  in Nigeria</p>
+                </div>
+                <div class="mb-[50px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
+                </div>
             </div>
         </div>
-    </div>
-</section> 
-</body>
-<script>
-    function Menu(e) {
-    let list = document.querySelector('ul');
+   </section> 
 
-    e.menu === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) : (e.name = "menu", list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
-}
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    </body>
+ <script>
     function scrolll() {
         var left = document.querySelector(".scroll-images")
         left.scrollBy(350, 0)
@@ -446,4 +380,4 @@
       e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
     }
   </script>
-</html>
+</html>  

@@ -12,84 +12,86 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+ 
 </head>
 <body class="bg-white">
-    <nav class=" bg-white shadow md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
-      <div class="flex justify-between items-center ">
-        <span class="md:shrink-0 text-2xl cursor-pointer m-2">
-                    <a href="index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
-                </span>
-
-                <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
-                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+    <nav class=" bg-white  md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
+        <div class="flex justify-between items-center ">
+          <span class="md:shrink-0 text-2xl cursor-pointer m-2">
+                      <a href="/index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
                   </span>
-                </div>
+  
+                  <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                    </span>
+                  </div>
+  
+              <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500 " href="/aboutus.html">About Us</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                  <li>
+                                      <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
+                                  </li>
+                                  <li>
+                                      <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                                  </li>
+                                  <li>
+                                      <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
+                             
+                                    </li>
+                                  <li>
+                                      <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
+                                  </li>
+                              </ul>
+                           
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500" href="/case-studies.html">Case Studies</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-white hover:bg-[#05596b] rounded-2xl">Client Login</button>
+                      <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-[#46F7AD] rounded-2xl">Request Demo</button>
+                  </li>
+                                      
+              </ul>  
+          </nav>
 
-            <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500 " href="/aboutus.html">About Us</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-red-200 duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
-                                </li>
-                                <li>
-                                    <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                                </li>
-                                <li>
-                                    <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
-                                </li>
-                                <li>
-                                    <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
-                                </li>
-                            </ul>
-                         
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500" href="./case-studies.html">Case Studies</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Client Login</button>
-                    <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl">Request Demo</button>
-                </li>
-                                    
-            </ul>  
-        </nav> 
         <div>
             <div class="h-96  relative">
                 <img class=" h-full w-full object-cover absolute" src="/public/assets/abouthero.svg" alt="home hero" />
-            <div class="m-5 absolute top-1 md:top-1 lg:top-1 lg:mx-24 md:mx-24 -mt-4 md:mt-4 lg:mt-4">
-                <h1 class="text-[#46F7AD] text-xl my-4 p-2 uppercase">Chekkit for Consumer Promotions & Loyalty Programs</h1>
-                <h1 class="text-white font-bold sm:text-3xl md:text-4xl lg:text-5xl">The Smartest Way To Spend Your Promotions & Rewards Budget</h1>
-                <div class="flex flex-row gap-2 md:gap-4 lg:gap-4"> 
-                    <div class="flex flex-col gap-4 my-1">
-                        <div class="flex flex-row text-white gap-2">
+            <div class="absolute top-1 md:top-1 mx-[16px] md:mx-[100px]">
+                <h1 class="text-[#46F7AD] font-black text-[12px] mt-[70px] md:text-[14px] md:mt-[90px] uppercase">Chekkit for Consumer Promotions & Loyalty Programs</h1>
+                <p class="text-white text-[36px] font-black md:w-[894px] md:text-[56px]">The Smartest Way To Spend Your Promotions & Rewards Budget</p>
+                <!-- <div class="flex md:flex-row md:gap-y-10"> 
+                    <div class="flex flex-col md:flex-col md:gap-y-10">
+                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p>Reward consumers directly at point of purchase</p>
+                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
-                        <div class="flex flex-row text-white gap-2">
+                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p>Reward consumers directly at point of purchase</p>
+                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-4 my-1">
-                        <div class="flex flex-row text-white gap-2">
+                    <div class="flex flex-col md:flex-col md:gap-y-10">
+                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p>Reward consumers directly at point of purchase</p>
+                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
-                        <div class="flex flex-row text-white gap-2">
+                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p>Reward consumers directly at point of purchase</p>
+                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
                     </div>
                
-            </div>
+            </div> -->
                 <div class="">
-                    <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl capitalize">request demo </button>
+                    <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4  left-0 hover:bg-cyan-500 rounded-xl capitalize">Join the team </button>
                 </div>
             </div>
             
@@ -100,343 +102,342 @@
 
         
      
+        <!-- CHOOSE -->
+        <section class="mx-[16px] mt-[80px] md:mt-[150px] md:mx-[100px]">
+            <div class="flex flex-col md:flex-row md:justify-items-center md:items-center">
+                <div class=" md:w-[545px]">
+                    <div class="p-[8px] bg-[#E5EEF0] text-center w-[133px] h-[32px] md:w-[168px] md:h-[51px] md:p-[16px] rounded-[100px]">
+                        <p class="font-bold md:font-black text-[12px] md:text-[14px] uppercase">why choose us</p>
+                    </div>
+                    <div class="mt-[16px] md:mt-[12px]" >
+                        <h1 class="text-[#2E3B41] text-[16px] font-black md:text-[36px] capitalize">A World Class Technology Company.</h1>
+                        <p class="text-[12px] font-normal mt-[24px] md:text-[14px]">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
+                    </div>
+                    <div class="flex md:mt-[50px] md:left-0 md:flex-row justify-items-center items-center">
+                        <img class="inline" src="/public/assets/Playbutton.svg" alt="Play" />
+                        <p class="font-black mb-6 text-[12px] md:font-bold text-[#05596B] md:text-[20px] md:mb-6 uppercase">  Watch our story </p>
+                    </div>
+                </div>
+                <div class="">
+                    <img src="/public/assets/metric.svg" alt="metric" class="object-cover" />
+                </div> 
+            </div>
+        </section>
 
-    <section class="flex flex-col my-12 m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-        <div class="p-5 gap-2 md:w-2/5 lg:w-2/5 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-            <div class="bg-[#E5EEF0] p-2 rounded-full h-10 w-52 md:mx-auto lg:mx-auto">
-                <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">why choose us</p>
-            </div>
-            <div class="" >
-                <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">Amazing metric in the wine & spirit industry
-                </h1>
-                <p class="text-xs  tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-s lg:text-s  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-            </div>
-            <div class="inline-flex  flex-row gap-2 items-center">
-                <img src="/public/assets/Playbutton.svg" alt="Play" />
-                <p class="text-[#05596B] mb-8 font-bold md:text-xl lg:text-xl">  Watch our story </p>
-            </div>
-        </div>
-        <div class="m-5 md:w-3/5 lg:w-3/5">
-            <img src="/public/assets/metric.svg" alt="metric" class="w-full" />
-        </div> 
-    </section>
 
-
-   
-    <section>
-        <div class="flex flex-col gap-2 my-2 m-4  md:p-5 lg:p-5">
-            <div class="bg-[#E5EEF0] p-2 rounded-full h-10 w-72 ">
-                <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">MISSION , vision & VALUES</p>
-            </div>
+        <!-- MISSION -->
+        <section class="mx-[16px] mt-[80px] md:mt-[150px] md:mx-[100px]">
             <div class="">
-                <p class="text-xs  tracking-wide items-center  justify-items-center md:text-sm lg:text-sm  leading-5 capitalize">Here we will be erging mission, values and what drives us here as to how they relate to chekkit technology</p>
+                <div class=" bg-[#E5EEF0] justify-items-center text-center w-[205px] h-[32px] md:w-[253px] md:h-[51px]  rounded-[100px]">
+                    <p class="text-[#153853] p-[8px] text-[12px] uppercase font-black md:p-[16px] md:text-[14px]">MISSION , vision & VALUES</p>
+                </div>
+                <div class="mt-[12px] md:mt-[12px] md:w-[545px]">
+                    <p class="font-light text-[12px]  tracking-wide items-center  justify-items-center md:text-[14px]  leading-5 ">Here we will be erging mission, values and what drives us here as to how they relate to chekkit technology</p>
+                </div>
             </div>
-        </div>
             
-            <div class="p-5 gap-2 md:p-12 lg:p-12 md:justify-between lg:justify-between flex flex-col md:flex-row lg:flex-row  md:gap-4 lg:gap-4"> 
-                <div class="">
-                    <div>
-                        <h1 class="text-2xl md:text-5xl lg:text-5xl font-medium leading-10">We have a clear direction. </h1>
-                        <p class="text-xs md:text-sm lg:text-sm leading-5"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
+            <div class="gap-y-6 mt-[24px] md:justify-between flex flex-col md:flex-row md:mt-[50px]"> 
+                    <div class="md:w-[545px]">
+                        <h1 class="text-[32px] font-medium md:text-[56px]">We have a clear direction. </h1>
+                        <p class="tracking-wide font-light mt-[16px] leading-5 md:mt-[24px]"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
                     </div>
-                </div>
-                <div class="">
-                    <div>
-                        <h1 class="text-2xl md:text-5xl lg:text-5xl font-medium leading-10">We have a clear direction. </h1>
-                        <p class="text-xs md:text-sm lg:text-sm leading-5"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
+                    <div class="md:w-[545px]">
+                        <h1 class="text-[32px] font-medium md:text-[56px]">We have a clear direction. </h1>
+                        <p class="tracking-wide font-light mt-[16px] leading-5 md:mt-[24px]"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
                     </div>
-                </div>
             </div>
-            <div class="p-5 gap-2 md:p-12 lg:p-12 md:mx-auto lg:mx-auto flex flex-col md:flex-row lg:flex-row  md:gap-4 lg:gap-4"> 
-                <div class="">
-                    <div>
-                        <h1 class="text-2xl md:text-5xl lg:text-5xl font-medium leading-10">We have a clear direction. </h1>
-                        <p class="text-xs md:text-sm lg:text-sm leading-5"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
-                    </div>
+            <div class="mt-[24px] gap-y-6 md:justify-between flex flex-col md:flex-row md:mt-[150px]"> 
+                <div class="md:w-[545px]">
+                    <h1 class="text-[32px] font-medium md:text-[56px]">We have a clear direction. </h1>
+                    <p class="tracking-wide font-light mt-[16px] leading-5 md:mt-[24px]"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
                 </div>
-                <div class="">
-                    <div>
-                        <h1 class="text-2xl md:text-5xl lg:text-5xl font-medium leading-10">We have a clear direction. </h1>
-                        <p class="text-xs md:text-sm lg:text-sm leading-5"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
-                    </div>
+                <div class="md:w-[545px]">
+                    <h1 class="text-[32px] font-medium md:text-[56px]">We have a clear direction. </h1>
+                    <p class="tracking-wide font-light mt-[16px] leading-5 md:mt-[24px]"> One day, Chekkit's labels will be the seal of genuity for every great product, ensuring you know the story of everything you consume </p>
                 </div>
-            </div>
+        </div>
 
-    </section>
-
-    <section class="flex flex-col my-12 m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-        <div class="mx-auto gap-2 md:w-2/5 lg:w-2/5 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-            <div class="bg-[#E5EEF0] mx-auto p-2 rounded-full h-10 w-52 md:mx-auto lg:mx-auto">
-                <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">clients and industries</p>
-            </div>
-            <div class="" >
-                <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">Sectors and Industy Players we help</h1>
-                <p class="text-xs  tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-s lg:text-s  leading-5 capitalize mx-auto">We bring pure technology value to our clients regardless of the type and size of their business.</p>
-            </div>
-        </div>
-        <div class="m-5 md:w-3/5 lg:w-3/5">
-            <img src="/public/assets/sectors.svg" alt="sectors" class="w-full" />
-        </div> 
-    </section>
-
-    <section>
-        <div class="flex flex-col mt-12 m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-            <div class="p-5 gap-2 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-                <div class="bg-[#E5EEF0] mx-auto p-2 rounded-full h-15 w-52 md:mx-auto lg:mx-auto">
-                    <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">How we started....how its going</p>
-                </div>
-                <div class="" >
-                    <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">Brief History Of Chekkit technology </h1>
-                    <p class="text-xs  tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-s lg:text-s  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-                </div>
-            </div>
-        </div>
-        <div class="">
-            <img  src="/public/assets/history.svg" alt="history" />
-        </div>
-    </section>
- 
-    <section>
-        <div class="flex flex-col mt-12 mx-auto md:flex-row lg:flex-row md:p-5 lg:p-5">
-            <div class="p-5 gap-2 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-                <div class="bg-[#E5EEF0] mx-auto p-2 rounded-full h-10 w-32 md:mx-auto lg:mx-auto">
-                    <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">advisors</p>
-                </div>
-                <div class="" >
-                    <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">league of advisors</h1>
-                    <p class="text-xs  tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-s lg:text-s  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-row md:flex-col lg:flex-col justify-around">
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row md:justify-around lg:justify-around md:my-4 lg:my-8">
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex flex-col gap-2 md:flex-row lg:flex-row md:justify-around lg:justify-around">
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-                <div class="">
-                    <img  src="/public/assets/man.svg" alt="man" />
-                    <div class="text-center md:my-2 lg:my-2">
-                        <h1 class="text-xl font-bold md:text-3xl lg:text-3xl ">Dare odumade </h1>
-                        <p class="text-sm md:text-lg lg:text-lg">Brand and Marketing Advisor</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
 
-    <section>
-        <div class="flex flex-col p-12 md:flex-row lg:flex-row  md:p-5 lg:p-5">
-            <div class="p-5 gap-2 md:p-5 lg:p-5 flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-                <div class="bg-[#E5EEF0] mx-auto  p-2 rounded-full h-10 w-32">
-                    <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase md:flex-start lg:flex-start md:text-left lg:text-left">meet the team</p>
-                </div>
-                <div class="mx-auto text-center items-center justify-center" >
-                    <h1 class="text-sm my-2 md:text-3xl lg:text-3xl font-bold leading-5 capitalize md:mt-2 lg:mt-2 md:flex-start lg:flex-start ">Take a look at the team</h1>
-                    <p class="text-xs my-2 tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-sm lg:text-sm  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
-                </div>
-            </div>
-        </div>
-        <div class="flex flex-row md:flex-col lg:flex-col justify-around">
-            <div class="flex flex-col md:flex-row lg:flex-row md:justify-around lg:justify-around">
-                <div class="">
-                    <img src="/public/assets/guy.svg" alt="Guy" />
-                    <div class="flex flex-col gap-2 text-center">
-                        <h1 class="mt-2 text-xl font-bold md:text-2xl lg:text-2xl">Dare odumade</h1>
-                        <h3>Founder, CEO</h3>
-                        <p><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+        <!-- CLIENTS -->
+        <section class="mx-[16px] mt-[80px] md:mt-[150px] md:mx-[100px]">
+            <div class="flex flex-col md:flex-row md:justify-items-center md:items-center">
+                <div class=" md:w-[545px]">
+                    <div class="p-[8px] bg-[#E5EEF0] text-center w-[194px] h-[32px] md:w-[239px] md:h-[51px] md:p-[16px] rounded-[100px]">
+                        <p class="text-[#153853] font-bold md:font-black text-[12px] md:text-[14px] uppercase">clients and industries</p>
                     </div>
-                </div>
-                 <div class="">
-                    <img src="/public/assets/guy.svg" alt="Guy" />
-                    <div class="flex flex-col gap-2 text-center">
-                        <h1 class="mt-2 text-xl font-bold md:text-2xl lg:text-2xl">Dare odumade</h1>
-                        <h3>Founder, CEO</h3>
-                        <p><i class="fa-brands fa-linkedin-in change-color"></i></p>        
-                    </div>
-                </div>
-                 <div class="">
-                    <img src="/public/assets/guy.svg" alt="Guy" />
-                    <div class="flex flex-col gap-2 text-center">
-                        <h1 class="mt-2 text-xl font-bold md:text-2xl lg:text-2xl">Dare odumade</h1>
-                        <h3>Founder, CEO</h3>
-                        <p><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+                    <div class="mt-[16px] md:mt-[12px]" >
+                        <h1 class="text-[#2E3B41] text-[16px] font-black md:text-[36px] capitalize">Sectors and Industy Players we help.</h1>
+                        <p class="text-[12px] font-normal mt-[24px] md:text-[14px]">We bring pure technology value to our clients regardless of the type and size of their business.</p>
                     </div>
                 </div>
                 <div class="">
-                    <img src="/public/assets/guy.svg" alt="Guy" />
-                    <div class="flex flex-col gap-2 text-center">
-                        <h1 class="mt-2 text-xl font-bold md:text-2xl lg:text-2xl">Dare odumade</h1>
-                        <h3>Founder, CEO</h3>
-                        <p><i class="fa-brands fa-linkedin-in change-color"></i></p>        
-                    </div>
-                </div>
+                    <img src="/public/assets/sectors.svg" alt="sectors" class="w-full" />
+                </div> 
             </div>
-        </div>
-    </section>
+        </section>
 
-    
-    <section class="my-16">
-        <div class="flex flex-col mx-auto md:flex-row lg:flex-row md:p-5 lg:p-5">
-            <div class="p-5 gap-2 md:p-5 lg:p-5 md:mx-auto lg:mx-auto flex flex-col justify-center  md:flex-start lg:flex-start  md:gap-4 lg:gap-4">
-                <div class="bg-[#E5EEF0] mx-auto p-2 rounded-full h-10 w-52 md:mx-auto lg:mx-auto">
-                    <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase">work culture</p>
+
+             <!-- BRIEF HISTORY -->
+             <section class="mt-[80px] md:mt-[150px] ">
+                <div class="mb-[24px] mx-auto md:mb-[50px]">
+                    <div class="bg-[#E5EEF0] h-[32px] p-[8px] w-[270px] text-center rounded-[100px] md:w-[330px] md:h-[51px] md:p-[16px] mx-auto">
+                        <p class="text-[12px] tracking-wide font-black text-center text-[#153853] md:text-[14px] uppercase"><a href="#">How we started.... how its going</a></p>
+                    </div>
+                    <div class="" >
+                        <h1 class="text-[16px] mt-[16px] md:text-[36px] font-bold items-center tracking-wide text-center justify-items-center leading-10 capitalize mx-auto">Chekkit is built for different industries </h1>
+                        <p class="text-[12px] items-center tracking-wide text-center justify-items-center font-normal mt-[16px] md:mt-[24px] md:text-[14px]">We bring pure technology value to our clients regardless of the type and size of their business.</p>
+                    </div>
                 </div>
-                <div class="" >
-                    <h1 class="text-sm items-center text-center justify-items-center md:text-3xl lg:text-3xl font-bold leading-5 capitalize mx-auto">life at chekkit technologies</h1>
-                    <p class="text-xs mt-2 tracking-wide items-center text-center justify-items-center md:mt-2 lg:mt-2 md:text-s lg:text-s  leading-5 capitalize mx-auto">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world.</p>
+                <div class="">
+                    <img  src="/public/assets/history.svg" alt="history" />
                 </div>
-            </div>   
-        </div>
-        <div class="flex justify-center items-center mx-auto my-2">
-            <button class="bg-[#46F7AD] text-[#153853] duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl capitalize">view open roles</button>
-        </div>
-        <div class="flex flex-row justify-between">
-            <div class="">
-                <img src="/public/assets/advisor1.svg" alt="advisor1" />
-                <img src="/public/assets/advisor2.svg" alt="advisor2" />
-            </div>
-            <div class="">
-                <img src="/public/assets/advisor1.svg" alt="advisor1" />
-            </div>
-            <div class="">
-                <img  src="/public/assets/advisor4.svg" alt="advisor1" />
-            </div>
-            <div class="">
-                <img src="/public/assets/advisor1.svg" alt="advisor1" />
-            </div>
-            <div class="">
-                <img src="/public/assets/advisor1.svg" alt="advisor1" />
-                <img src="/public/assets/advisor2.svg" alt="advisor2" />
-            </div>
-        </div>
+            </section>
+
         
-    </section>
+            <!-- ADVISORS -->
+            <section class="mx-[16px] md:mx-[100px] mt-[80px] md:mt-[150px] ">
+                <div class="mb-[24px] mx-auto md:mb-[50px]">
+                    <div class="bg-[#E5EEF0] h-[32px] p-[8px] w-[85px] text-center rounded-[100px] md:w-[113px] md:h-[51px] md:p-[16px] mx-auto">
+                        <p class="text-[12px] tracking-wide font-black text-center text-[#153853] md:text-[14px] uppercase"><a href="#">advisors</a></p>
+                    </div>
+                    <div class="" >
+                        <h1 class="text-[16px] mt-[16px] md:text-[36px] font-bold items-center tracking-wide text-center justify-items-center leading-10 capitalize mx-auto">league of advisors</h1>
+                        <p class="text-[12px] items-center tracking-wide text-center justify-items-center font-normal mt-[16px] md:mt-[24px] md:text-[14px]">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the worlds.</p>
+                    </div>
+                </div>
+                <div class="flex flex-row gap-x-8 md:flex-col justify-around">
+                    <div class="flex flex-col gap-y-8 md:flex-row md:justify-around">
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-y-8 justify-around md:mt-[50px] md:flex-row md:justify-around">
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                        <div class="">
+                            <img  src="/public/assets/man.svg" alt="man" />
+                            <div class="text-center">
+                                <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade </h1>
+                                <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] ">Brand and Marketing Advisor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section class="my-16">
-     <div class="flex flex-col  mx-auto m-4 md:flex-row lg:flex-row md:p-5 lg:p-5">
-        <div class="p-5 md:w-1/2 lg:w-1/2 md:p-5 lg:p-5 flex flex-col md:flex-start md:text-left lg:flex-start lg:text-left">
-            <div class="bg-[#E5EEF0] p-2 rounded-full h-10 w-28 md:flex-start md:text-left lg:flex-start lg:text-left">
-                <p class="text-sm items-center text-center justify-items-center font-bold text-[#153853] uppercase ">BENEFITS</p>
-            </div>
-            <div class="my-5 flex flex-col gap-4" >
-                <h1 class="text-sm md:text-4xl lg:text-4xl font-bold leading-5 capitalize">benefits chekkit offers this industry
-                </h1>
-            </div>
-            <div class="flex flex-col justify-center items-center gap-4 mx-auto my-5">
-                <div class="flex flex-col gap-2 mx-auto md:flex-row lg:flex-row ">
-                    <div class=""> 
-                        <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                <!-- TEAM -->
+            <section class="mt-[80px] mx-[16px] md:mt-[150px] md:mx-[100px] ">
+                    <div class="mb-[24px] md:mb-[24px]">
+                        <div class="bg-[#E5EEF0] mb-[16px] p-[8px] w-[125px] h-[32px]  md:w-[159px] md:h-[52px] md:p-[16px] rounded-[100px]">
+                            <p class="text-[12px] tracking-wide font-black text-center uppercase text-[#153853] md:text-[14px]">meet the team</p>
+                        </div>
+                        <div class="" >
+                            <h1 class="text-[16px] mt-[16px]  md:text-[48px] font-bold tracking-wide leading-10 capitalize">Take a look at the team</h1>
+                            <p class="text-[16px] tracking-wide  font-normal mt-[16px] md:mt-[24px] md:text-[16px]">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the world..</p>
+                        </div>
                     </div>
-                    <div class="">
-                        <h1 class="font-bold text-lg lg:text-3xl md:text-3xl capitalize">professional environment</h1>
-                        <p class="text-neutral-400 font-light text-xs lg:text-sm md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                    <div class="flex flex-row md:flex-col">
+                        <div class="flex flex-row md:flex-row gap-x-7">
+                            <div class="">
+                                <img src="/public/assets/guy.svg" alt="Guy" />
+                                <div class="flex flex-col text-center">
+                                    <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade</h1>
+                                    <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] "></p>Founder, CEO</p>
+                                    <p class=" mt-[8px] md:mt-[16px]"><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+                                </div>
+                            </div>
+                            <div class="">
+                                <img src="/public/assets/guy.svg" alt="Guy" />
+                                <div class="flex flex-col text-center">
+                                    <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade</h1>
+                                    <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] "></p>Founder, CEO</p>
+                                    <p class=" mt-[8px] md:mt-[16px]"><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+                                </div>
+                            </div>
+                            <div class="hidden md:block">
+                                <img src="/public/assets/guy.svg" alt="Guy" />
+                                <div class="flex flex-col text-center">
+                                    <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade</h1>
+                                    <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] "></p>Founder, CEO</p>
+                                    <p class=" mt-[8px] md:mt-[16px]"><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+                                </div>
+                            </div>
+                            <div class="hidden md:block">
+                                <img src="/public/assets/guy.svg" alt="Guy" />
+                                <div class="flex flex-col text-center">
+                                    <h1 class="font-bold text-[14px] mt-[16px] md:mt-[24px] md:text-[20px] ">Dare odumade</h1>
+                                    <p class="font-normal text-[12px] tracking-wide mt-[8px] md:mt-[16px] md:text-[16px] "></p>Founder, CEO</p>
+                                    <p class=" mt-[8px] md:mt-[16px]"><i class="fa-brands fa-linkedin-in change-color"></i></p>        
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="flex flex-col gap-4 md:flex-row lg:flex-row capitalize">
-                    <div class="">
-                        <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">salary plus bonuses</h1>
-                        <p class="text-neutral-400 font-light text-xs lg:text-sm md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-4 md:flex-row lg:flex-row capitalize">
-                    <div class="">
-                        <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                    </div>
-                    <div class="">
-                        <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">team building</h1>
-                        <p class="text-neutral-400 font-light text-xs lg:text-sm md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                    </div>
-                </div>
-            </div>        
-        </div>
-        <div class="m-5 md:w-1/2 lg:w-1/2">
-            <div class="h-[20rem]">
-                <img src="/public/assets/benefits.svg" alt="metric" />
-            </div>
-            <div class="flex flex-col justify-center items-center gap-2 mx-auto my-12">
-                <div class="flex flex-col gap-4 md:flex-row lg:flex-row capitalize">
-                    <div class="">
-                        <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                     </div>
-                    <div class="">
-                        <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">team building</h1>
-                        <p class="text-neutral-400 font-light text-xs lg:text-sm md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                    </div>
-                </div>
-                <div class="flex flex-col gap-4 md:flex-row lg:flex-row capitalize">
-                    <div class="">
-                        <img src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
-                     </div>
-                    <div class="">
-                        <h1 class="font-bold text-lg lg:text-3xl md:text-3xl ">team building</h1>
-                        <p class="text-neutral-400 font-light text-xs lg:text-sm md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-       </div> 
-       <div class="flex justify-center items-center mx-auto my-2">
-        <button class="bg-[#46F7AD] text-[#153853] duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl capitalize">view open roles</button>
-    </div>
-    </section>
-    
+                    
+                </section>
 
-    <section class="relative">
-        <div class="flex flex-col  m-5 md:m-24 lg:m-24 md:flex-col lg:flex-col">
-                <div class="">
-                    <h1 class="text-[#46F7AD] text-xl md:text-xl lg:text-xl my-4 p-2 uppercase font-extrabold">testimonials</h1>
+
+             <!-- WORK CULTURE -->
+             <section class="">
+                <div class="mx-[16px] md:mx-[100px] mt-[80px] md:mt-[150px] mb-[24px] md:mb-[50px]">
+                    <div class="bg-[#E5EEF0] h-[32px] p-[8px] w-[132px] text-center rounded-[100px] md:w-[159px] md:h-[51px] md:p-[16px] mx-auto">
+                        <p class="text-[12px] tracking-wide font-black text-center text-[#153853] md:text-[14px] uppercase"><a href="#">work culture</a></p>
+                    </div>
+                    <div class="" >
+                        <h1 class="text-[16px] mt-[16px] md:text-[36px] font-bold items-center tracking-wide text-center justify-items-center leading-10 capitalize mx-auto">life at chekkit technologies</h1>
+                        <p class="text-[12px] items-center tracking-wide text-center justify-items-center font-normal mt-[16px] md:mt-[24px] md:text-[14px]">We believe by 2025, we would have directly impacted and protected millions of people across Africa & the worlds.</p>
+                    </div>
                 </div>
-                <div class="flex flex-row gap-2 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
-                    <div class="md:mt-4 lg:mt-4">
-                        <img class="h-50 inline"  src="/public/assets/saber.svg" alt="Saber" />
+                <div class="flex justify-center items-center mx-auto">
+                    <button class="bg-[#46F7AD] text-[#153853] text-[14px] duration-500 px-6 py-4 mx-4 font-black hover:bg-[#153853] hover:text-[#46F7AD] md:text-[16px] rounded-[16px] capitalize">view open roles</button>
+                </div>
+                <div class="flex flex-row gap-x-[5px] md:gap-x-[22px]">
+                    <div class="flex flex-col gap-y-[5px]">
+                        <img src="/public/assets/advisor1.svg" alt="advisor1" />
+                        <img src="/public/assets/advisor2.svg" alt="advisor2" />
+                    </div>
+                    <div class="flex justify-items-center">
+                        <img src="/public/assets/advisor1.svg" alt="advisor1" />
+                    </div>
+                    <div class="flex flex-col place-content-end">
+                        <img  src="/public/assets/advisor4.svg" alt="advisor1" />
+                    </div>
+                    <div class="flex justify-items-center">
+                        <img src="/public/assets/advisor1.svg" alt="advisor1" />
+                    </div>
+                    <div class="flex flex-col gap-y-[5px]">
+                        <img src="/public/assets/advisor1.svg" alt="advisor1" />
+                        <img src="/public/assets/advisor2.svg" alt="advisor2" />
+                    </div>
+                </div>
+                
+            </section>
+
+
+            <!-- BENEFITS -->
+            <section class="my-[80px] mx-[16px] md:my-[150px] md:mx-[100px]">
+                    <div class="my-[50px] md:my-[100px]">
+                    <div class="flex flex-col md:flex-row lg:flex-row">
+
+                    <div class="flex flex-col  md:w-1/2 md:flex-start md:text-left">
+                        <div class="bg-[#E5EEF0] mb-[16px] p-[8px] w-[125px] h-[32px]  md:w-[159px] md:h-[52px] md:p-[16px] rounded-[100px]">
+                            <p class="text-[12px] tracking-wide font-black text-center uppercase text-[#153853] md:text-[14px]">benefits</p>
+                        </div>
+                        <div class="md:mb-[50px] md:w-[560px] md:mt-[10px]" >
+                            <h1 class="text-[#001117] font-bold text-[16px] md:text-[48px]  capitalize">benefits you get as a chekkers</h1>
+                        </div>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <div class="flex flex-row gap-x-4 mt-[30px] mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                                <div class=""> 
+                                    <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                                </div>
+                                <div class="">
+                                    <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Ship</h1>
+                                    <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                                <div class=""> 
+                                    <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                                </div>
+                                <div class="">
+                                    <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                                    <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-[14px]">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center ">
+                                <div class=""> 
+                                    <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                                </div>
+                                <div class="">
+                                    <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                                    <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-[14px]">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                                </div>
+                            </div>
+                        </div>        
+                    </div>
+
+                    <div class="flex flex-col md:w-1/2 lg:w-1/2 md:ml-[100px]">
+                        <div class="">
+                            <img class="" src="/public/assets/engage-pic.svg" alt="Engage" />
+                        </div>
+
+                        <div class="flex flex-col mt-[30px] justify-center items-center gap-2 md:mt-[50px]">
+                            <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                                <div class=""> 
+                                    <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                                </div>
+                                <div class="">
+                                    <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Ship</h1>
+                                    <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
+                                <div class=""> 
+                                    <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
+                                </div>
+                                <div class="">
+                                    <h1 class="font-bold text-[14px] md:text-[20px] capitalize">Track</h1>
+                                    <p class="text-[#4E6269] text-[12px] tracking-wider font-normal md:text-sm">Over 50 million products already use our codes as a means to collect insights directly from their last-mile patients</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+            </div> 
+                    <div class="flex justify-center items-center mx-auto">
+                        <button class="bg-[#46F7AD] text-[#153853] text-[14px] duration-500 px-6 py-4 mx-4 font-black hover:bg-[#153853] hover:text-[#46F7AD] md:text-[16px] rounded-[16px] capitalize">become a chekker</button>
+                    </div>
+            </div>
+         </section>
+        
+
+     <!-- TESTIMONIALS -->
+     <section class="relative mb-[80px] mx-[16px] md:mx-[100px] md:mb-[150px]">
+        <div class="flex flex-col mb-[40px] md:mb-[70px] md:flex-col">
+                <div class="mb-[10px] md:mb-[8px]">
+                    <h1 class="text-[#46F7AD] text-[12px] md:text-[#05596B] font-black md:text-[14px]  uppercase">testimonials</h1>
+                </div>
+                <div class="flex flex-row items-center  gap-x-2.5 md:gap-x-5 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+                    <div class="md:mt-2">
+                        <img class="h-[44px] w-[4px] md:h-[72px] md:w-[6px] inline"  src="/public/assets/saber.svg" alt="Saber" />
                     </div>
                     <div>
-                        <h3 class="text-lg md:text-5xl lg:text-5xl font-bold">Driving Blockchain Solutions  To <br> Enhance Companies</h3>
+                        <h3 class="text-[#001117] font-bold md:text-[36px] md:font-black capitalize">Driving Blockchain Solutions To <br> Enhance Companies</h3>
                     </div>
                 </div>
         </div>
@@ -453,147 +454,157 @@
         </div>
     </section>
     
+
+    <!-- PROTECT -->
           <section class="">
                 <div class="h-96 relative ">
-                    <img class="h-full w-full object-cover absolute" src="/public/assets/footer-Banner.svg" alt="footer-Banner" />
-                    <div class="absolute top-1 -mt-2 md:-mt-2 lg:-mt-2">
-                        <div class="flex flex-col md:flex-row lg:flex-row">
-                                <div class="flex flex-col p-5 lg:mx-24 md:mx-24 lg:mt-16 md:mt-16 mt-4 py-3">
-                                    <h1 class="text-[#46F7AD] text-lg my-4 px-5 py-2 font-bold uppercase">protect your life</h1>    
-                                    <div class="flex flex-row gap-2 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
-                                        <img src="/public/assets/saber.svg" alt="Saber" />          
-                                        <h1 class="text-white gap-4 font-bold text-2xl md:text-4xl lg:text-4xl">Join The Fight Against Fake<br> Products</h1>
+                    <img class="h-full w-full inset-0 object-cover absolute" src="/public/assets/Banner.svg" alt="footer-Banner" />
+                    <div class="absolute top-1 justify-center items-center md:pt-[70px]">
+                        <div class="flex flex-col md:flex-row justify-center items-center justify-items-center align-middle">
+                                <div class="flex flex-col px-[16px] py-[40px]   md:gap-x-5  md:ml-[100px]">
+                                    <h1 class="mb-[10px] text-[12px] text-[#46F7AD] font-black md:mb-[8px] md:text-[14px]  uppercase">protect your life</h1>    
+                                    <div class="flex flex-row mb-[20px] gap-x-2.5 md:gap-x-5 md:flex-row lg:flex-row ">
+                                        <img class="h-[44px] w-[4px] md:h-[72px] md:w-[6px] md:mt-6 inline" src="/public/assets/saber.svg" alt="Saber" />          
+                                        <h1 class="text-[16px] text-[#E7F6FE] gap-4 font-black md:text-[36px]">Join The Fight Against Fake<br> Products</h1>
                                     </div> 
-                                    <p class="text-slate-300 font-thin sm:text-[30px] md:text-lg lg:text-lg mt-6">Explore the anti-counterfei service or create a Chekkit account now and start verifying identity products. You can also contact us to provide consumer intelligence solution for your business.</p>
+                                    <p class="text-[#E7F6FE] text-[12px] tracking-wide leading-5 md:font-medium md:text-[16px]">Explore the anti-counterfei service or create a Chekkit account now and start verifying identity <br> products. You can also contact us to provide consumer intelligence solution for your business.</p>
                                 </div>
-                                <div class="flex flex-row gap-2 md:flex-row lg:flex-row lg:m-24 md:m-24">
-                                    <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl capitalize">request demo </button>
-                                    <button class="bg-transparent text-sm text-white border-2 border-white font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Talk To Us</button>
+                                <div class="flex flex-row md:flex-row  md:items-center md:align-middle md:justify-items-center md:px-[100px]">
+                                    <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-[16px] capitalize">request demo </button>
+                                    <button class="bg-transparent text-sm text-white border-2 border-white font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-[16px]">Talk To Us</button>
                                 </div>
                         </div>
                     </div>
                 </div>
         </section>
   
-  
+        <!-- FOOTER -->
            <section class="bg-[#03262E]">
-            <div class=" text-white shadow md:flex md:items-center md:justify-between md:px-24  md:py-5">
-                <div class="flex flex-col md:w-2/5 lg:w-2/5 gap-4 md:flex-col lg:flex-col md:grid-flow-row lg:grid-flow-row md:gap-4 lg:gap-4 md:mx-5 lg:mx-5">
-                        <div class="flex flex-col">
-                                <div>
-                                <p class="text-xs font-light tracking-wide my-6 p-2 lg:text-l md:text-l"><span class="text-[#46F7AD]">Chekkit Technologies Corp.</span>  was founded in 2018 to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+                    <div class=" text-[#EEF9F8] px-[16px] pt-[50px] grid md:grid-cols-2 md:pt-[60px] md:px-[130px]">
+                        <div class="flex flex-col md:pr-[260px]">
+                                <div class="flex flex-col">
+                                        <p class="font-light md:text-[14px] tracking-wide"><span class="text-[#46F7AD] font-medium md:text-[16px]">Chekkit Technologies Corp.</span>  was founded in 2018  to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+                                        </div>
+                                        <div class="flex flex-row mt-[24px]">
+                                            <img src="/public/assets/Facebook.svg" alt="Facebook" />
+                                            <img class="mx-2.5" src="/public/assets/IG.svg" alt="IG" />
+                                            <img class="" src="/public/assets/Twitter.svg" alt="Twitter" />
+                                            <img class="mx-2.5" src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
                                 </div>
-                                <div class="flex flex-row gap-2 p-2">
-                                    <img src="/public/assets/Facebook.svg" alt="Facebook" />
-                                    <img src="/public/assets/IG.svg" alt="IG" />
-                                    <img src="/public/assets/Twitter.svg" alt="Twitter" />
-                                    <img src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
+                                <div class="mt-[24px] md:mt-[45px]">
+                                    <div class="mb-[5px] md:mb-[12px]">
+                                        <h1 class="text-[#46F7AD] font-medium md:text-[16px]">Contact</h1>
+                                    </div>
+                                        <div class="">
+                                            <div class="mb-[20px] md:mb-[38px]">
+                                                <div class="flex flex-row mb-[6px] items-center md:gap-x-2 md:mb-[12px] ">
+                                                    <div>
+                                                        <img src="/public/assets/nigeria.svg" alt="nigeria" />
+                                                    </div>
+                                                    <div><p class="text-[14px] font-light tracking-wide md:text-[14px]"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
+                                                </div>
+                
+                                                <div class="flex flex-row items-center md:gap-x-2">
+                                                    <div>
+                                                        <img src="/public/assets/usa.svg" alt="usa" />
+                                                    </div>
+                                                    <div><p class="text-[14px] font-light tracking-wide  md:text-[14px]">1305, W11th Street, TX 77008, USA</p></div>
+                                                </div>
+                                            </div>
+            
+                                            <div>
+                                                <div class="flex flex-row mb-[6px]  items-center md:gap-x-2 md:mb-[12px] ">
+                                                    <div>
+                                                        <img src="/public/assets/email.svg" alt="email" />
+                                                    </div>
+                                                    <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
+                                                </div>
+                                                <div class="flex flex-row items-center md:gap-x-2">
+                                                    <div>
+                                                        <img src="/public/assets/phone.svg" alt="phone" /> </p>
+                                                    </div>
+                                                    <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">hello@chekkitapp.com</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div>
                         </div>
-                        <div class="">
-                            <div class="">
-                                <h1 class="text-[#46F7AD] text-xl my-4 p-2">Contact</h1>
+            
+                        <div class="flex flex-row mt-[24px] md:mt-0 md:flex-col">
+                            <div class="flex flex-col md:flex-row  text-[#EEF9F8]">
+                                <div class="flex flex-col mr-[150px] md:mr-0 ">
+                                    <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Company</h1>
+                                        <p class="text-xs font-light tracking-wide my-1">About Us</p>
+                                        <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
+                                        <p class="text-xs font-light tracking-wide my-1">Careers</p>
+                                        <p class="text-xs font-light tracking-wide my-1">Awards</p>
+                                </div>
+                                <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px] ">
+                                    <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Products</h1>
+                                        <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
+                                        <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
+                                        <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
+                                </div>
+                                <div class="flex flex-col mt-[24px] md:mt-0">
+                                    <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Solutions</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
+                                    <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
+                                </div>
+                    
+                               
                             </div>
-                                <div class="">
-                                    <div class="flex flex-row gap-1 items-center p-2">
-                                        <div>
-                                            <img src="/public/assets/nigeria.svg" alt="nigeria" />
-                                        </div>
-                                        <div><p class="text-xs font-light tracking-wide my-1"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
-                                    </div>
-    
-                                    <div class="flex flex-row gap-1 items-center p-2">
-                                        <div>
-                                            <img src="/public/assets/usa.svg" alt="usa" />
-                                        </div>
-                                        <div><p class="text-xs font-light tracking-wide my-1">1305, W11th Street, TX 77008, USA</p></div>
-                                    </div>
-    
-                                    <div class="flex flex-row gap-1 items-center p-2">
-                                        <div>
-                                            <img src="/public/assets/email.svg" alt="email" />
-                                        </div>
-                                        <div><p class="text-xs font-light tracking-wide my-1">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
-                                    </div>
-                                    <div class="flex flex-row gap-1 items-center p-2">
-                                        <div>
-                                            <img src="/public/assets/phone.svg" alt="phone" /> </p>
-                                        </div>
-                                        <div><p class="text-xs font-light tracking-wide my-1">hello@chekkitapp.com</p></div>
-                                    </div>
+                    
+                            <div class="flex flex-col md:flex-row md:mt-[45px]  text-[#EEF9F8]">
+                                <div class="flex flex-col ">
+                                    <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Resources</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">Blog</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Help Center</p>
                                 </div>
+                    
+                                <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px]">
+                                    <h1 class="text-[#46F7AD] font-medium  mb-[5px] md:mb-[12px] md:text-[16px]">Community</h1>
+                                        <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
+                                        <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
+                                </div>
+                                <div class="flex flex-col mt-[50px] md:mt-0">
+                                    <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Download</h1>
+                                        <p class="my-1"> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
+                                        <p class="my-1"> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
+                                </div>
+                            </div>
+                    
+                            <div class="flex flex-row  text-[#EEF9F8]">
+                                
+                    
+                                   
+                            </div>
                         </div>
-                </div>
-    
-            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-[#46F7AD] text-xl">Company</h1>
-                        <p class="text-xs font-light tracking-wide my-1">About Us</p>
-                        <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
-                        <p class="text-xs font-light tracking-wide my-1">Careers</p>
-                        <p class="text-xs font-light tracking-wide my-1">Awards</p>
-                </div>
-    
-                <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-                    <h1 class="text-[#46F7AD] text-xl">Resources</h1>
-                    <p class="text-xs font-light tracking-wide my-1">Blog</p>
-                    <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
-                    <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
-                    <p class="text-xs font-light tracking-wide my-1">Help Center</p>
-                </div>
-            </div>
-    
-            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-24 lg:gap-24 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-                <div class="flex flex-col gap-2 ">
-                    <h1 class="text-[#46F7AD] text-xl">Products</h1>
-                        <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
-                        <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
-                        <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
-                </div>
-    
-                <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-                    <h1 class="text-[#46F7AD] text-xl">Community</h1>
-                        <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
-                        <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
-                </div>
-            </div>
-    
-            <div class="flex flex-row justify-around my-12 md:w-1/5 lg:w-1/5 gap-4 md:flex-col lg:flex-col md:grid-flow-col lg:grid-flow-col md:gap-4 lg:gap-4 md:mx-5 lg:mx-5 text-[#EEF9F8]">
-                <div class="flex flex-col gap-2">
-                        <h1 class="text-[#46F7AD] text-xl">Solutions</h1>
-                        <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
-                        <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
-                        <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
-                        <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
                     </div>
     
-                    <div class="flex flex-col gap-2 md:my-4 lg:my-4">
-                        <h1 class="text-[#46F7AD] text-xl">Download</h1>
-                            <p> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
-                            <p> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
+                    <div class="mx-[16px] md:mx-[100px]">
+                        <hr class="h-px my-[30px] border-[0.25px] bg-[#CBF7F3]">
                     </div>
-            </div>
-        </div>
+
     
-    
-            <!-- <hr class="h-px my-2 mx-2 md:mx-24 lg:mx-24 bg-[#EEF9F8] border-0  md:px-24 lg:px-24 md:my-6 lg:my-6 "> -->
-            <div class="bg-[#03262E] text-white">
-                <div class="flex flex-col gap-4 mx-auto md:flex-row text-center items-center justify-center p-5 md:justify-between lg:justify-between md:px-24  md:py-8 lg:px-24  lg:py-8">
-                    <div>
-                        <p class="text-xs font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
+            <div class="bg-[#03262E] text-[#EEF9F8]">
+                <div class="flex flex-col mx-auto md:flex-row text-center items-center justify-center md:mx-[100px] md:justify-between md:pb-[50px]">
+                    <div class="mb-[24px] md:mb-0">
+                        <p class="text-[11px] font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
                     </div>
-                    <div>
-                        <p class="text-xs font-light tracking-wide">Made with ❤️  in Nigeria</p>
+                    <div class="mb-[24px] md:mb-0">
+                        <p class="text-[11px] font-light tracking-wide">Made with ❤️  in Nigeria</p>
                     </div>
-                    <div>
-                        <p class="text-xs font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
+                    <div class="mb-[50px] md:mb-0">
+                        <p class="text-[11px] font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
                     </div>
                 </div>
             </div>
        </section> 
     
-       <!-- <section class="p-4 ">
-        <div class="md:p-24 lg:p-24"> -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
         </body>
      <script>
