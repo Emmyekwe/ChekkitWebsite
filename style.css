@@ -1228,7 +1228,7 @@ color: #fff !important;
   width: auto;
   background: #FFFFFF;
   box-shadow: 0px 0px 50px rgba(151, 151, 151, 0.12);
-  border-radius: 100px;
+  border-radius: 100px; 
 }
 
 .brands-text h1 {
