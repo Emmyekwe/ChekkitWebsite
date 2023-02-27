@@ -16,52 +16,49 @@
 </head>
 <body class="bg-white">
     <nav class=" bg-white  md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
-      <div class="flex justify-between items-center ">
-        <span class="md:shrink-0 text-2xl cursor-pointer m-2">
-                    <a href="/index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
-                </span>
-
-                <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
-                    <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+        <div class="flex justify-between items-center ">
+          <span class="md:shrink-0 text-2xl cursor-pointer m-2">
+                      <a href="/index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
                   </span>
-                </div>
-
-            <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500 " href="/aboutus.html">About Us</a>
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-red-200 duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
-                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
-                                <li>
-                                    <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
-                                </li>
-                                <li>
-                                    <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                                </li>
-                                <li>
-                                    <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
-                                </li>
-                                <li>
-                                    <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
-                                </li>
-                            </ul>
-                         
-                </li>
-                <li class="mx-4 my-6 md:my-0">
-                    <a class="text-xl hover:text-red-200 duration-500" href="/case-studies.html">Case Studies</a>
-                </li>
-                <!-- <div class="md:flex-col sm:flex-col my-2 gap-2"> -->
-                <li class="mx-4 my-6 md:my-0">
-                    <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-xl">Client Login</button>
-                    <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-xl">Request Demo</button>
-                </li>
-                    
-                <!-- </div> -->
-                
-            </ul>  
-        </nav> 
+  
+                  <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                    </span>
+                  </div>
+  
+              <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500 " href="/aboutus.html">About Us</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                              <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                  <li>
+                                      <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
+                                  </li>
+                                  <li>
+                                      <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                                  </li>
+                                  <li>
+                                      <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
+                                  </li>
+                                  <li>
+                                      <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
+                                  </li>
+                              </ul>
+                           
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <a class="text-xl hover:text-[#46F7AD] duration-500" href="/case-studies.html">Case Studies</a>
+                  </li>
+                  <li class="mx-4 my-6 md:my-0">
+                      <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-white hover:bg-[#05596b] rounded-2xl">Client Login</button>
+                      <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-[#46F7AD] rounded-2xl">Request Demo</button>
+                  </li>
+                                      
+              </ul>  
+          </nav>   
 
         <!-- HERO -->
         <div class="flex mx-auto flex-col md:flex-row  md:mx-[100px]">

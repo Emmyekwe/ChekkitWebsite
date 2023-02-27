@@ -22,7 +22,7 @@
                   </span>
   
                   <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
-                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+                      <ion-icon class="text-[#05596B] " name="menu" onclick="Menu(this)"></ion-icon>
                     </span>
                   </div>
   
@@ -62,35 +62,35 @@
           </nav>
 
         <div>
-            <div class="h-96  relative">
+            <div class="h-[695px] md:h-[606px] relative">
                 <img class=" h-full w-full object-cover absolute" src="/public/assets/abouthero.svg" alt="home hero" />
             <div class="absolute top-1 md:top-1 mx-[16px] md:mx-[100px]">
                 <h1 class="text-[#46F7AD] font-black text-[12px] mt-[70px] md:text-[14px] md:mt-[90px] uppercase">Chekkit for Consumer Promotions & Loyalty Programs</h1>
                 <p class="text-white text-[36px] font-black md:w-[894px] md:text-[56px]">The Smartest Way To Spend Your Promotions & Rewards Budget</p>
-                <!-- <div class="flex md:flex-row md:gap-y-10"> 
-                    <div class="flex flex-col md:flex-col md:gap-y-10">
-                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
+                <div class="flex flex-col mt-[20px] items-start md:flex-row md:mt-[16px] md:gap-y-10"> 
+                    <div class="flex flex-col md:flex-col md:gap-y-[40px] ">
+                        <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5  w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
                             <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
-                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
+                        <div class="flex flex-row mt-[16px] md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
                             <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
                     </div>
-                    <div class="flex flex-col md:flex-col md:gap-y-10">
-                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
+                    <div class="flex flex-col mt-[16px] md:mt-0 md:flex-col md:gap-y-10">
+                        <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
                             <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
-                        <div class="flex flex-col items-center gap-2 justify-center text-white md:gap-x-3.5 md:w-[220px]">
+                        <div class="flex flex-row mt-[16px] mb-[50px] md:mb-0 md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
                             <img src="/public/assets/icon.svg" alt="Icon" />
                             <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
                         </div>
                     </div>
                
-            </div> -->
-                <div class="">
+            </div>
+                <div class="md:mt-[50px]">
                     <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4  left-0 hover:bg-cyan-500 rounded-xl capitalize">Join the team </button>
                 </div>
             </div>
@@ -358,6 +358,10 @@
                             <h1 class="text-[#001117] font-bold text-[16px] md:text-[48px]  capitalize">benefits you get as a chekkers</h1>
                         </div>
 
+                        <div class="mb-[20px] mt-[16px] md:hidden md:mb-0 md:mt-0">
+                            <img class="" src="/public/assets/engage-pic.svg" alt="Engage" />
+                        </div>
+
                         <div class="flex flex-col justify-center items-center">
                             <div class="flex flex-row gap-x-4 mt-[30px] mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
                                 <div class=""> 
@@ -392,11 +396,11 @@
                     </div>
 
                     <div class="flex flex-col md:w-1/2 lg:w-1/2 md:ml-[100px]">
-                        <div class="">
+                        <div class="hidden md:block">
                             <img class="" src="/public/assets/engage-pic.svg" alt="Engage" />
                         </div>
 
-                        <div class="flex flex-col mt-[30px] justify-center items-center gap-2 md:mt-[50px]">
+                        <div class="flex flex-col mt-0 justify-center items-center gap-2 md:mt-[50px]">
                             <div class="flex flex-row gap-x-4 mb-[30px] md:flex-row md:gap-x-5 md:mb-[30px] justify-center items-center">
                                 <div class=""> 
                                     <img class="inline-block" src="/public/assets/benefits-icon.svg" alt="benefits-icon" />
@@ -427,7 +431,7 @@
         
 
      <!-- TESTIMONIALS -->
-     <section class="relative mb-[80px] mx-[16px] md:mx-[100px] md:mb-[150px]">
+     <!-- <section class="relative mb-[80px] mx-[16px] md:mx-[100px] md:mb-[150px]">
         <div class="flex flex-col mb-[40px] md:mb-[70px] md:flex-col">
                 <div class="mb-[10px] md:mb-[8px]">
                     <h1 class="text-[#46F7AD] text-[12px] md:text-[#05596B] font-black md:text-[14px]  uppercase">testimonials</h1>
@@ -452,7 +456,7 @@
                     <img class="block md:hidden lg:hidden" src="/public/assets/comments-up.svg" alt="Comments" />
                 </div>
         </div>
-    </section>
+    </section> -->
     
 
     <!-- PROTECT -->
