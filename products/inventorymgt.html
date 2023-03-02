@@ -1,340 +1,428 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset='utf-8'>
+    <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Chekkit Technologies</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' href='/public/css/assetmgt.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='/style.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@1,900,700,500,301,701,300,401,901,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </head>
-<body>
-   <section>
-        <nav class="traceability-navbar">
-            <div class="logo">
-                <a href="/index.html"> <img src="/public/assets/trace-logo.svg" alt="logo" /> </a>
-              </div>
+<body class="bg-white">
+    <nav class="bg-[#03262E]  md:flex md:items-center justify-between md:px-24  md:py-5 lg:flex lg:items-center lg:justify-between lg:px-24  lg:py-5 ">
+      <div class="flex justify-between items-center ">
+        <span class="md:shrink-0 text-2xl cursor-pointer m-2">
+                    <a href="/index.html"> <img class="h-10 inline" src="/public/assets/trace-logo.svg" alt="logo" /> </a>
+                </span>
 
-            <div class="trace-links">
-                <a href="./aboutus.html">About Us</a>
-                <div class="dropdown">
-                    <a class="dropbtn" href="/products.html">Products <i class="fa-solid fa-angle-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="./chekkitapp.html">ChekkitApp</a>
-                        <a href="./supplychain.html">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
-                        <a href="./traceability.html">Traceability</a>
-                        <a href="./consumer-intelligence.html">Consumer Intelligence <i class="fa-solid fa-angle-right"></i></a>
-                      </div>
+                <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                    <ion-icon class="text-[#7EF4C1]" name="menu" onclick="Menu(this)"></ion-icon>
+                  </span>
                 </div>
+
+            <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-[#03262E] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-[#03262E]">
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-white hover:text-[#46F7AD] duration-500 " href="/aboutus.html">Company</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-white text-xl hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                            <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
+                                <li>
+                                    <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
+                                </li>
+                                <li>
+                                    <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain <i class="fa-solid fa-angle-right"></i></a>
+                                </li>
+                                <li>
+                                    <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
+                                </li>
+                                <li>
+                                    <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
+                                </li>
+                            </ul>
+                         
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <a class="text-xl text-white hover:text-[#46F7AD] duration-500" href="/case-studies.html">Services</a>
+                </li>
+                <li class="mx-4 my-6 md:my-0">
+                    <button class="bg-[#05596] text-[#46F7AD] border-2 border-[#46F7AD] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-[#05596B] hover:bg-[#46F7AD] rounded-2xl">Client Login</button>
+                    <button class="bg-[#46F7AD] text-[#05596B] duration-500 px-6 py-4 mx-4 font-bold hover:bg-transparent hover:border-2 hover:border-[#46F7AD] hover:text-[#46F7AD] rounded-2xl">Request Demo</button>
+                </li>
+                    
                 
-                <a href="/case-studies.html">Case Studies</a>
-            </div>
+            </ul>  
+        </nav> 
 
-            <div class="trace-buttons">
-                <button class="trace-client">Client Login</button>
-                <button class="trace-request">Request Demo</button>
-            </div>
-        </nav>
-   </section>   
-   <section class="trace-top-hero">
-        <div class="trace-top-text">
-            <h1>
-                Tag, Trace and Verify <span class="white">your goods along the</span> Distribution Chain.</h1>
-            <p>traceability systems imply the use of a unique piece of data (e.g., order date/time or a serialized sequence number, generally through the use of data matrix code/qr codes which can be traced through the entire production flow.</p>
-            <div class="trace-top-button">
-                <button>Get Started</button>
-            </div>
-            <div class="trace-top-image">
-                <img src="/public/assets/ci.svg" alt="CI" />
-                <!-- <img src="/public/assets/mgt.svg" alt="CI" /> -->
 
+        <div class="bg-[#03262E] flex flex-col mx-auto text-center justify-center items-center px-[100px]">
+            <div class="">
+                <h1 class="text-[#46F7AD] font-black text-[36px]  md:text-[48px] lg:text-[48px] ">Tag, Trace and Verify  <span class="text-white">your goods along the</span> Distribution Chain.</h1>
+                <p class="text-[14px] text-white leading-7 mt-[24px] md:text-[18px] lg:text-[18px] md:mt-[24px] lg:mt-[24px] ">traceability systems imply the use of a unique piece of data (e.g., order date/time or a serialized sequence number, generally through the use of data matrix code/qr codes which can be traced through the entire production flow.</p>
+            </div>
+            <div class="mt-[50px] mb-[40px] md:mt-[50px] md:mb-[70px]">
+                <button class="bg-[#46F7AD] text-[#05596B] duration-500 px-6 py-4 mx-4 font-bold hover:bg-cyan-500 rounded-2xl">Get Started</button>
+            </div>
+            <div class="-mb-24 md:-mb-72">
+                <img src="/public/assets/tech-ci.svg" alt="CI" />
             </div>
         </div>
+   
 
-   </section>
-
-   <section class="trace-actions">
-        <div class="flex flex-col gap-2 text-center items-center justify-center">
-            <div class="trace-img">
+        <!-- HERO SECTION -->
+   <section class="flex flex-col  text-center justify-center items-center mx-[62px] mt-[180px] md:flex-row  md:mt-[400px] md:px-[100px] ">
+        <div class="flex flex-col  text-center items-center justify-center mb-[24px] md:mr-[40px]">
+            <div class="">
                 <img src="/public/assets/benefits-icon.svg" alt="CI" />
             </div>
-            <h1>Tag and trace</h1>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p>
+            <h1 class="text-[#001117] capitalize font-bold mt-[20px] mb-[8px] text-[16px] md:text-[20px] ">Tag and trace</h1>
+            <p class="font-normal text-[#404D54] text-[12px] md:text-[14px]">Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p> 
         </div>
-        <div class="flex flex-col gap-2 text-center items-center justify-center">
-            <div class="trace-img">
+        <div class="flex flex-col  text-center items-center justify-center mb-[24px] md:mr-[40px]">
+            <div class="">
                 <img src="/public/assets/benefits-icon.svg" alt="CI" />
             </div>
-            <h1>identify and verify</h1>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p>
+            <h1 class="text-[#001117] capitalize font-bold mt-[20px] mb-[8px] text-[16px] md:text-[20px] ">Tag and trace</h1>
+            <p class="font-normal text-[#404D54] text-[12px] md:text-[14px]">Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p> 
         </div>
-        <div class="flex flex-col gap-2 text-center items-center justify-center">
-            <div class="trace-img">
+        <div class="flex flex-col  text-center items-center justify-center mb-[24px] md:mr-[40px]">
+            <div class="">
                 <img src="/public/assets/benefits-icon.svg" alt="CI" />
             </div>
-            <h1>flexible manage access</h1>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p>
+            <h1 class="text-[#001117] capitalize font-bold mt-[20px] mb-[8px] text-[16px]  md:text-[20px] ">Tag and trace</h1>
+            <p class="font-normal text-[#404D54] text-[12px] md:text-[14px]">Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p> 
         </div>
-        <div class="flex flex-col gap-2 text-center items-center justify-center">
-            <div class="trace-img">
+        <div class="flex flex-col  text-center items-center justify-center">
+            <div class="">
                 <img src="/public/assets/benefits-icon.svg" alt="CI" />
             </div>
-            <h1>100% secure channel</h1>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p>
+            <h1 class="text-[#001117] capitalize font-bold mt-[20px] mb-[8px] text-[16px] md:text-[20px] ">Tag and trace</h1>
+            <p class="font-normal text-[#404D54] text-[12px] md:text-[14px]">Nemo enim ipsam voluptatem quia voluptas sit asperna netsum lorisum </p> 
         </div>
    </section>
 
-   <section class="partner-brand">
-        <div class="partner-brand-content">
-            <h1>We work with the best partners</h1>
-            <img src="/public/assets/brands.svg" alt="Brands" />
-        </div>
-   </section>
-
-   <section class="test-container">
-    <div class="trust-wrapper">
-            <div class="trust">
-                <h1>What Traceability entails</h1>
-            </div>
-            <div class="trust-innertext">
-                <div>
-                    <img  src="/public/assets/saber.svg" alt="Saber" />
-                </div>
-                <div>
-                    <h3>Trace goods along the distribution chain on a batch  or series number basis.</h3>
-                </div>
-            </div>
-
-            <div class="trace-entails">
-                <div class="trace-entails-text">
-                    <h2>Acquire Consumers Automatically</h2>
-                    <p>Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
-                </div>
-                <div class="trace-entails-img">
-                    <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
-                </div>
-            </div>
-
-
-            <div class="trace-entails-mid">
-                <div class="trace-entails-mid-content">
-                    <div class="trace-entails-mid-text">
-                        <h2>Be Top of Mind At All Times</h2>
-                        <p>Communicate regularly with millions of consumers at once using our secure bulk messaging system</p>
-                    </div>
-                    <div class="trace-entails-mid-img">
-                        <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
-                    </div>
-                </div>
-                <div>
-                    <div class="trace-entails-mid-content">
-                        <div class="trace-entails-mid-text">
-                            <h2>Get Up Close & Persona</h2>
-                            <p>Segment your consumers into groups and communicate better with personalized messages.</p>
-                        </div>
-                        <div class="trace-entails-mid-img">
-                            <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
-                        </div>
-                    </div>
-            </div>
-        </div>
-
-    <div class="trace-entails-mid">
-        <div class="trace-entails-mid-content">
-            <div class="trace-entails-mid-text">
-                <h2>Take stock count of your assets</h2>
-                <p>Communicate regularly with millions of consumers at once using our secure bulk messaging system</p>
-            </div>
-            <div class="trace-entails-mid-img">
-                <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
-            </div>
-        </div>
-        <div>
-            <div class="trace-entails-mid-content">
-                <div class="trace-entails-mid-text">
-                    <h2>Aside count, view count history</h2>
-                    <p>Segment your consumers into groups and communicate better with personalized messages.</p>
-                </div>
-                <div class="trace-entails-mid-img">
-                    <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
-                </div>
-            </div>
-    </div>
-</div>
-
-
-
-
-            <div class="trace-entails">
-                <div class="trace-entails-text">
-                    <h2>Automate Your Marketing & Engagement</h2>
-                    <p>Schedule messaging campaigns, continuously survey the consumers you've acquired, and anlyze the effectiveness of your marketing</p>
-                </div>
-                <div class="trace-entails-img">
-                    <img  src="/public/assets/trace-dash2.svg" alt="Trace" />
-                </div>
-            </div>
-    <!-- <div class="test-col">
-            <div class="test-col-text">
-                <img  src="/public/assets/man.svg" alt="man" />
-                <h1>bradley james</h1>
-                <p>CEO, Unilever</p>
-            </div>
-            <div>
-                <img  src="/public/assets/comments.svg" alt="Comments" />
-            </div>
-    </div> -->
-</section>
-
-   <section class="test-container">
-    <div class="trust-wrapper">
-            <div class="trust">
-                <h1>testimonials</h1>
-            </div>
-            <div class="trust-innertext">
-                <div>
-                    <img  src="/public/assets/saber.svg" alt="Saber" />
-                </div>
-                <div>
-                    <h3>Driving Blockchain Solutions  To Enhance Companies</h3>
-                </div>
-            </div>
-    </div>
-    <div class="test-col">
-            <div class="test-col-text">
-                <img  src="/public/assets/man.svg" alt="man" />
-                <h1>bradley james</h1>
-                <p>CEO, Unilever</p>
-            </div>
-            <div>
-                <img  src="/public/assets/comments.svg" alt="Comments" />
-            </div>
-    </div>
-</section>
-
-     <section class="top-footer-banner">
-                <div>
-                    <img src="/public/assets/footer-Banner.svg" alt="footer-Banner" />
-                </div>
-                <div class="top-footer-content">
-                    <div class="top-footer-content-text">
-                        <h1>protect your life</h1>
-                        <div class="top-footer-content-innertext">
-                            <div>
-                                <img src="/public/assets/saber.svg" alt="Saber" />
-                            </div>
-                            <div>
-                                <h3>Join The Fight Against Fake Products</h3>
-                            </div>
-                        </div>
-                        <p>Explore the anti-counterfei service or create a Chekkit account now and start verifying identity products. You can also contact us to provide consumer intelligence solution for your business.</p>
-                    </div>
-                    <div class="top-footer-content-button">
-                        <button class="request">Request Demo</button>
-                        <button class="talk">Talk to us</button>
-                    </div>
-                </div>
-        </section>
- 
-  
-   <section class="traceabilityfooter-container">
-        <div class="aboutusfooter-wrapper">
-            <div class="chekkit-container1">
-                <div class="chekkit-footer">
-                    <div class="flex flex-col gap-4">
-                        <div>
-                    <p><span class="chekkit">Chekkit Technologies Corp.</span>  was founded in 2018 to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
-                    </div>
-                    <div class="socials flex flex-row gap-2">
-                        <img src="/public/assets/Facebook.svg" alt="Facebook" />
-                        <img src="/public/assets/IG.svg" alt="IG" />
-                        <img src="/public/assets/Twitter.svg" alt="Twitter" />
-                        <img src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
-                    </div>
-                </div>
-                </div>
-            </div>
-            <div class="chekkit-container2">
-                <div class="chekkit-footer2">
-                    <h1>Contact</h1>
-                </div>
-                <div class="chekkit-contact2">
-                    <p>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/nigeria.svg" alt="nigeria" />  9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/usa.svg" alt="usa" />1305, W11th Street, TX 77008, USA.</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/email.svg" alt="email" />+234 (0) 813 849 1667 | +234 (0) 814 711 4822</div> <br>
-                        <div class="flex flex-row gap-1 text-gray-300">
-                        <img src="/public/assets/phone.svg" alt="phone" />
-                     hello@chekkitapp.com </p>
-                </div>
-            </div>
-        </div>
-
-        <div class="aboutusfooter-wrapper2">
-            <div class="flex flex-row space-x-20">
-                <div class="chekkit-container-company">
-                    <h1>Company</h1>
-                    <p>About Us</p>
-                    <p>Contact Us</p>
-                    <p>Careers</p>
-                    <p>Awards</p>
-                </div>
-                <div class="chekkit-container-products">
-                    <h1>Products</h1>
-                <p>ChekkitApp</p>
-                <p>Consumer Intelligence</p>
-                <p>Chekkit USSD</p>
-                </div>
-                <div class="chekkit-container-solutions">
-                    <h1>Solutions</h1>
-                <p>Consumer Loyalty</p>
-                <p>Retailer Loyalty</p>
-                <p>Supply Chain </p>
-                <p>Anti-Counterfeiting </p>
-                </div>
-            </div>
-            <div class="flex flex-row  space-x-20 gap-2">
-                <div class="chekkit-container-resources">
-                    <h1>Resources</h1>
-                        <p>Blog</p>
-                        <p>Case Studies</p>
-                        <p>Learning Portal</p>
-                        <p>Help Center</p>
-                </div>
-                <div class="chekkit-container-community">
-                    <h1>Community</h1>
-                        <p>COVID-19</p>
-                        <p>CSR Activities</p>
-                </div>
-                <div class="chekkit-container-download">
-                    <h1>Download</h1>
-                    <div class="flex flex-col gap-2">
-                        <p> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
-                        <p> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
-                    </div>   
-                </div>
-            </div>
-        </div>
-        <hr>
-
-        <div class="about-footer-container">
-            <div class="footer-wrapper-about">
-                <div>
-                    <p>© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
-                </div>
-                <div>
-                    <p>Made with ❤️  in Nigeria</p>
-                </div>
-                <div>
-                    <p>Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
-                </div>
-            </div>
-        </div>
+          <!-- BRANDS AND PARTNERS -->
+          <section  class=" mt-[80px] md:mt-[150px]">
         
-   </section>
-</body>
-</html>
+            <div class="bg-[#F9FAFB] py-[30px]">
+                    <div class="">
+                        <h1 class="text-[12px] items-center text-center font-medium md:text-[16px] capitalize md:mx-auto">We work with the best partners</h1>
+                    </div>
+        
+                    <div class=" grid grid-flow-col mx-[16px] md:grid-cols-6 items-center justify-items-center md:mt-[20px] md:mx-[150px] md:my-[20px]">
+                            <div class="">
+                                <img class="" src="/public/assets/cdc.svg" alt="cdc" />
+                            </div> 
+                            <div class="">
+                                <img class="" src="/public/assets/nivea.svg" alt="nivea" />
+                            </div>
+                            <div class="">
+                                <img class="" src="/public/assets/uni.svg" alt="unilever" />
+                            </div>
+                            <div class="">
+                                <img class="" src="/public/assets/fmn.svg" alt="fmn" />
+        
+                            </div>
+                            <div class="">
+                                <img class="" src="/public/assets/merck.svg" alt="merck" />
+        
+                            </div>
+                            <div class="">
+                                <img class="" src="/public/assets/indomie.svg" alt="indomie" />
+                            </div>
+                    </div>
+                </div>
+           </section>
+
+   <!-- TRACEABILITY ENTAILS -->
+   <section class="relative mt-[80px] mx-[16px] md:mx-[100px] md:mt-[100px]">
+    <div class="flex flex-col  md:flex-col">
+            <div class="mb-[10px] md:mb-[8px]">
+                <h1 class="text-[#46F7AD] text-[12px] md:text-[#05596B] font-black md:text-[14px]  uppercase">What Traceability entails</h1>
+            </div>
+            <div class="flex flex-row items-center  gap-x-2.5 md:gap-x-5 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+                <div class="md:mt-2">
+                    <img class="h-[44px] w-[4px] md:h-[72px] md:w-[6px] inline"  src="/public/assets/saber.svg" alt="Saber" />
+                </div>
+                <div>
+                    <h3 class="text-[#001117] font-bold md:text-[36px] md:font-black capitalize">Trace goods along the distribution chain on a batch  or series number basis.</h3>
+                </div>
+            </div>
+    </div>
+    <div class="bg-[#FAFAFA] mt-[30px] mb-[24px] mx-auto pt-[50px] px-[30px] md:mt-[24px] md:pt-[50px] md:pl-[50px] md:pr-[16px] md:mb-[16px] rounded-t-[50px] rounded-b-[20px]">
+        <div class="">
+            <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[30px] md:mb-[8px] ">Acquire Consumers Automatically</h2>
+            <p class="font-normal text-[12px] md:text-[16px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+        </div>
+        <div class="flex md:mt-[70px] md:justify-end">
+            <img  src="/public/assets/trace-dash1.svg" alt="Trace" />
+        </div>
+    </div>
+
+        <div class="flex flex-col md:flex-row">
+            <div class="bg-[#FAFAFA] mb-[24px] pt-[50px] px-[30px] rounded-[20px] md:mr-[16px] md:px-[50px] md:pt-[50px] md:mb-0">
+                <div class="">
+                    <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[18px] md:mb-[8px] ">Acquire Consumers Automatically</h2>
+                    <p class="font-normal text-[12px] md:text-[14px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+                </div>
+                <div class="flex mt-[30px] md:mt-[100px] md:justify-end">
+                    <img  src="/public/assets/enatails-sm.svg" alt="Trace" />
+                </div>
+            </div>
+            <div class="bg-[#FAFAFA] pt-[50px] px-[30px] rounded-[20px] md:mr-[16px] md:px-[50px] md:pt-[50px]">
+                <div class="">
+                    <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[18px] md:mb-[8px] ">Acquire Consumers Automatically</h2>
+                    <p class="font-normal text-[12px] md:text-[14px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+                </div>
+                <div class="flex mt-[30px] md:mt-[100px] md:justify-end">
+                    <img  src="/public/assets/enatails-sm.svg" alt="Trace" />
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row mt-[24px] md:mt-[16px]">
+            <div class="bg-[#FAFAFA] mb-[24px] pt-[50px] px-[30px] rounded-[20px] md:mr-[16px] md:px-[50px] md:pt-[50px] md:mb-0">
+                <div class="">
+                    <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[18px] md:mb-[8px] ">Acquire Consumers Automatically</h2>
+                    <p class="font-normal text-[12px] md:text-[14px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+                </div>
+                <div class="flex mt-[30px] md:mt-[100px] md:justify-end">
+                    <img  src="/public/assets/enatails-sm.svg" alt="Trace" />
+                </div>
+            </div>
+            <div class="bg-[#FAFAFA] pt-[50px] px-[30px] rounded-[20px] md:mr-[16px] md:px-[50px] md:pt-[50px]">
+                <div class="">
+                    <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[18px] md:mb-[8px] ">Acquire Consumers Automatically</h2>
+                    <p class="font-normal text-[12px] md:text-[14px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+                </div>
+                <div class="flex mt-[30px] md:mt-[100px] md:justify-end">
+                    <img  src="/public/assets/enatails-sm.svg" alt="Trace" />
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-[#FAFAFA] mt-[30px] mb-[24px] mx-auto pt-[50px] px-[30px] md:mt-[16px] md:pt-[50px] md:pl-[50px] md:pr-[16px] rounded-t-[50px] rounded-b-[20px]">
+            <div class="">
+                <h2 class="text-[#001117] capitalize font-bold text-[14px] mb-[16px] md:text-[30px] md:mb-[8px] ">Automate Your Marketing & Engagement</h2>
+                <p class="font-normal text-[12px] md:text-[16px] ">Collect & maintain contact details of consumers as they buy and engage with your products online or offline.</p>
+            </div>
+            <div class="flex mt-[30px] md:mt-[70px] md:justify-end">
+                <img  src="/public/assets/marketing.svg" alt="Trace" />
+            </div>
+        </div>
+
+        <div class="flex mx-auto items-center justify-center">
+            <button class="bg-[#05596B] text-white duration-500 px-6 py-4 mx-4 font-bold hover:bg-[#46F7AD] rounded-xl">Get Started</button>
+
+            <button class="bg-white text-[#05596B] border-2 border-[#05596B] font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-white hover:bg-[#05596b] rounded-xl">Talk To Sales</button>
+        </div>
+    
+</section>
+
+   <!-- TESTIMONIALS -->
+   <section class="relative mb-[80px] mx-[16px] mt-[80px] md:mt-[100px] md:mx-[100px] md:mb-[150px]">
+    <div class="flex flex-col mb-[40px] md:mb-[70px] md:flex-col">
+            <div class="mb-[10px] md:mb-[8px]">
+                <h1 class="text-[#46F7AD] text-[12px] md:text-[#05596B] font-black md:text-[14px]  uppercase">testimonials</h1>
+            </div>
+            <div class="flex flex-row items-center  gap-x-2.5 md:gap-x-5 md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+                <div class="md:mt-2">
+                    <img class="h-[44px] w-[4px] md:h-[72px] md:w-[6px] inline"  src="/public/assets/saber.svg" alt="Saber" />
+                </div>
+                <div>
+                    <h3 class="text-[#001117] font-bold md:text-[36px] md:font-black capitalize">Driving Blockchain Solutions To <br> Enhance Companies</h3>
+                </div>
+            </div>
+    </div>
+    <div class="flex flex-col gap-4 items-center justify-center md:justify-center lg:justify-center md:flex-row lg:flex-row md:gap-4 lg:gap-4">
+            <div class="">
+                <img  src="/public/assets/man.svg" alt="man" />
+                <h1 class="text-[#153853] text-center md:text-xl lg:text-xl font-bold capitalize">bradley james</h1>
+                <p class="text-center md:text-base lg:text-base">CEO, Unilever</p>
+            </div>
+            <div>
+                <img class="hidden md:block lg:block"  src="/public/assets/comments.svg" alt="Comments" />
+                <img class="block md:hidden lg:hidden" src="/public/assets/comments-up.svg" alt="Comments" />
+            </div>
+    </div>
+</section>
+
+
+<!-- PROTECT -->
+      <section class="">
+            <div class="h-96 relative ">
+                <img class="h-full w-full inset-0 object-cover absolute" src="/public/assets/Banner.svg" alt="footer-Banner" />
+                <div class="absolute top-1 justify-center items-center md:pt-[70px]">
+                    <div class="flex flex-col md:flex-row justify-center items-center justify-items-center align-middle">
+                            <div class="flex flex-col px-[16px] py-[40px]   md:gap-x-5  md:ml-[100px]">
+                                <h1 class="mb-[10px] text-[12px] text-[#46F7AD] font-black md:mb-[8px] md:text-[14px]  uppercase">protect your life</h1>    
+                                <div class="flex flex-row mb-[20px] gap-x-2.5 md:gap-x-5 md:flex-row lg:flex-row ">
+                                    <img class="h-[44px] w-[4px] md:h-[72px] md:w-[6px] md:mt-6 inline" src="/public/assets/saber.svg" alt="Saber" />          
+                                    <h1 class="text-[16px] text-[#E7F6FE] gap-4 font-black md:text-[36px]">Join The Fight Against Fake<br> Products</h1>
+                                </div> 
+                                <p class="text-[#E7F6FE] text-[12px] tracking-wide leading-5 md:font-medium md:text-[16px]">Explore the anti-counterfei service or create a Chekkit account now and start verifying identity <br> products. You can also contact us to provide consumer intelligence solution for your business.</p>
+                            </div>
+                            <div class="flex flex-row md:flex-row  md:items-center md:align-middle md:justify-items-center md:px-[100px]">
+                                <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-[16px] capitalize">request demo </button>
+                                <button class="bg-transparent text-sm text-white border-2 border-white font-bold duration-500 px-6 py-4 mx-4 my-4 left-0 hover:bg-cyan-500 rounded-[16px]">Talk To Us</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+   
+
+    <!-- FOOTER -->
+       <section class="bg-[#03262E]">
+                <div class=" text-[#EEF9F8] px-[16px] pt-[50px] grid md:grid-cols-2 md:pt-[60px] md:px-[130px]">
+                    <div class="flex flex-col md:pr-[260px]">
+                            <div class="flex flex-col">
+                                    <p class="font-light md:text-[14px] tracking-wide"><span class="text-[#46F7AD] font-medium md:text-[16px]">Chekkit Technologies Corp.</span>  was founded in 2018  to offer product verification, anti-counterfeiting and provides manufacturers with a way to engage consumers directly. </p>
+                                    </div>
+                                    <div class="flex flex-row mt-[24px]">
+                                        <img src="/public/assets/Facebook.svg" alt="Facebook" />
+                                        <img class="mx-2.5" src="/public/assets/IG.svg" alt="IG" />
+                                        <img class="" src="/public/assets/Twitter.svg" alt="Twitter" />
+                                        <img class="mx-2.5" src="/public/assets/LinkedIn.svg" alt="LinkedIn" />
+                            </div>
+                            <div class="mt-[24px] md:mt-[45px]">
+                                <div class="mb-[5px] md:mb-[12px]">
+                                    <h1 class="text-[#46F7AD] font-medium md:text-[16px]">Contact</h1>
+                                </div>
+                                    <div class="">
+                                        <div class="mb-[20px] md:mb-[38px]">
+                                            <div class="flex flex-row mb-[6px] items-center md:gap-x-2 md:mb-[12px] ">
+                                                <div>
+                                                    <img src="/public/assets/nigeria.svg" alt="nigeria" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide md:text-[14px]"> 9B Onikoyi Lane Parkview Estate, Ikoyi, Lagos</p></div>
+                                            </div>
+            
+                                            <div class="flex flex-row items-center md:gap-x-2">
+                                                <div>
+                                                    <img src="/public/assets/usa.svg" alt="usa" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide  md:text-[14px]">1305, W11th Street, TX 77008, USA</p></div>
+                                            </div>
+                                        </div>
+        
+                                        <div>
+                                            <div class="flex flex-row mb-[6px]  items-center md:gap-x-2 md:mb-[12px] ">
+                                                <div>
+                                                    <img src="/public/assets/email.svg" alt="email" />
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">+234 (0) 813 849 1667 | +234 (0) 814 711 4822</p></div>
+                                            </div>
+                                            <div class="flex flex-row items-center md:gap-x-2">
+                                                <div>
+                                                    <img src="/public/assets/phone.svg" alt="phone" /> </p>
+                                                </div>
+                                                <div><p class="text-[14px] font-light tracking-wide my-1 md:text-[14px]">hello@chekkitapp.com</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+        
+                    <div class="flex flex-row mt-[24px] md:mt-0 md:flex-col">
+                        <div class="flex flex-col md:flex-row  text-[#EEF9F8]">
+                            <div class="flex flex-col mr-[150px] md:mr-0 ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Company</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">About Us</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Contact Us</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Careers</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Awards</p>
+                            </div>
+                            <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px] ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Products</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">ChekkitApp</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Consumer Intelligence</p>
+                                    <p class="text-xs font-light tracking-wide my-1">Chekkit USSD</p>
+                            </div>
+                            <div class="flex flex-col mt-[24px] md:mt-0">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Solutions</h1>
+                                <p class="text-xs font-light tracking-wide my-1">Consumer Loyalty</p>
+                                <p class="text-xs font-light tracking-wide my-1">Retailer Loyalty</p>
+                                <p class="text-xs font-light tracking-wide my-1">Supply Chain </p>
+                                <p class="text-xs  font-light tracking-wide my-1">Anti-Counterfeiting </p>
+                            </div>
+                
+                           
+                        </div>
+                
+                        <div class="flex flex-col md:flex-row md:mt-[45px]  text-[#EEF9F8]">
+                            <div class="flex flex-col ">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Resources</h1>
+                                <p class="text-xs font-light tracking-wide my-1">Blog</p>
+                                <p class="text-xs font-light tracking-wide my-1">Case Studies</p>
+                                <p class="text-xs font-light tracking-wide my-1">Learning Portal</p>
+                                <p class="text-xs font-light tracking-wide my-1">Help Center</p>
+                            </div>
+                
+                            <div class="flex flex-col mt-[24px] md:mt-0 md:mx-[130px]">
+                                <h1 class="text-[#46F7AD] font-medium  mb-[5px] md:mb-[12px] md:text-[16px]">Community</h1>
+                                    <p class="text-xs font-light tracking-wide my-1">COVID-19</p>
+                                    <p class="text-xs font-light tracking-wide my-1">CSR Activities</p>
+                            </div>
+                            <div class="flex flex-col mt-[50px] md:mt-0">
+                                <h1 class="text-[#46F7AD] font-medium mb-[5px] md:mb-[12px] md:text-[16px]">Download</h1>
+                                    <p class="my-1"> <img src="/public/assets/Playstore.svg" alt="Playstore" /></p>
+                                    <p class="my-1"> <img src="/public/assets/Appstore.svg" alt="Appstore" /></p>
+                            </div>
+                        </div>
+                
+                        <div class="flex flex-row  text-[#EEF9F8]">
+                            
+                
+                               
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mx-[16px] md:mx-[100px]">
+                    <hr class="h-px my-[30px] border-[0.25px] bg-[#CBF7F3]">
+                </div>
+
+
+        <div class="bg-[#03262E] text-[#EEF9F8]">
+            <div class="flex flex-col mx-auto md:flex-row text-center items-center justify-center md:mx-[100px] md:justify-between md:pb-[50px]">
+                <div class="mb-[24px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">© Copyright 2023 - Chekkit Tech. All Rights Reserved</p>
+                </div>
+                <div class="mb-[24px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">Made with ❤️  in Nigeria</p>
+                </div>
+                <div class="mb-[50px] md:mb-0">
+                    <p class="text-[11px] font-light tracking-wide">Privacy policy  |  Terms of Service  |  Report a vulnerability</p>
+                </div>
+            </div>
+        </div>
+   </section> 
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    </body>
+ <script>
+    function scrolll() {
+        var left = document.querySelector(".scroll-images")
+        left.scrollBy(350, 0)
+    }
+    function scrollr() {
+        var right = document.querySelector(".scroll-images")
+        right.scrollBy(-350, 0)
+    }
+
+
+    function Menu(e){
+      let list = document.querySelector('ul');
+      e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
+    }
+  </script>
+</html> 
