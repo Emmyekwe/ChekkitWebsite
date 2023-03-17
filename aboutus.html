@@ -15,37 +15,32 @@
  
 </head>
 <body class="bg-white">
-    <nav class=" bg-white  md:flex md:items-center justify-between md:px-[100px]  md:py-5">
-        <div class="flex justify-between items-center ">
-          <span class="md:shrink-0 text-2xl cursor-pointer m-2">
-                      <a href="/index.html"> <img class="h-10 inline" src="/public/assets/logo.svg" alt="logo" /> </a>
-                  </span>
+    <nav class="w-full h-[72px] md:h-[124px] bg-white  md:flex md:items-center justify-between md:px-[100px] md:py-5">
+        <div class="container px-4 md:px-0 h-full mx-auto flex justify-between items-center">
+             
+                      <a href="/index.html"> <img class="h-10 inline cursor-pointer" src="/public/assets/logo.svg" alt="logo" /> </a>
   
-                  <span class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
-                      <ion-icon class="text-[#05596B] " name="menu" onclick="Menu(this)"></ion-icon>
+                  <span  class="text-3xl cursor-pointer mx-2 md:hidden lg:hidden block">
+                      <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
                     </span>
-                  </div>
-  
-              <ul class="md:flex md:items-center z-50 md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50 sm:bg-white">
+
+              <ul class="bg-white md:flex md:items-center z-50 md:z-auto md:static absolute w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 sm:z-50">
                   <li class="mx-4 my-6 md:my-0">
                       <a class="text-xl hover:text-[#46F7AD] duration-500 " href="/aboutus.html">About Us</a>
                   </li>
                   <li class="mx-4 my-6 md:my-0">
                       <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn text-xl hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
-                          <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
+                          <div id="dropdown" class="z-10 bg-white hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                               <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                   <li>
                                       <a  href="/products/chekkitapp.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">ChekkitApp</a>
                                   </li>
                                   <li>
-                                      <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain 
-                                        <!-- <i class="fa-solid fa-angle-right"></i> -->
-                                    </a>
+                                      <a href="/products/supplychain.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Supply Chain </a>
                                   </li>
                                   <li>
                                       <a  href="/products/traceability.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Traceability</a>
-                             
-                                    </li>
+                                  </li>
                                   <li>
                                       <a href="/products/consumer-intelligence.html" class="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Consumer Intelligence</a>
                                   </li>
@@ -64,46 +59,45 @@
                   </li>
                                       
               </ul>  
-          </nav>
+            </div>
 
-        <div>
+          </nav> 
+
+          <div>
             <div class="h-[695px] md:h-[606px] relative">
                 <img class=" h-full w-full object-cover absolute" src="/public/assets/abouthero.svg" alt="home hero" />
-            <div class="absolute top-1 md:top-1 mx-[16px] md:mx-[100px]">
-                <h1 class="text-[#46F7AD] font-black text-[12px] mt-[70px] md:text-[14px] md:mt-[90px] uppercase">Chekkit for Consumer Promotions & Loyalty Programs</h1>
-                <p class="text-white text-[36px] font-black md:w-[894px] md:text-[56px]">The Smartest Way To Spend Your Promotions & Rewards Budget</p>
-                <div class="flex flex-col mt-[20px] items-start md:flex-row md:mt-[16px] md:gap-y-10"> 
-                    <div class="flex flex-col md:flex-col md:gap-y-[40px] ">
-                        <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5  w-[220px]">
-                            <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
+                <div class="absolute top-1 md:top-1 mx-[16px] md:mx-[100px]">
+                    <h1 class="text-[#46F7AD] font-black text-[12px] mt-[70px] md:text-[14px] md:mt-[90px] uppercase">Chekkit for Consumer Promotions & Loyalty Programs</h1>
+                    <p class="text-white text-[36px] font-black md:w-[894px] md:text-[56px]">The Smartest Way To Spend Your Promotions & Rewards Budget</p>
+                    <div class="flex flex-col mt-[20px] items-start md:flex-row md:mt-[16px] md:gap-y-10 md:gap-x-[42px]"> 
+                        <div class="flex flex-col md:flex-col md:gap-y-[40px] ">
+                            <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5  w-[256px]">
+                                <img src="/public/assets/icon.svg" alt="Icon" />
+                                <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchases</p>
+                            </div>
+                            <div class="flex flex-row mt-[16px] md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[256px]">
+                                <img src="/public/assets/icon.svg" alt="Icon" />
+                                <p class="text-[12px] font-medium md:text-[14px]">Survey your consumers as they participate in campaigns</p>
+                            </div>
                         </div>
-                        <div class="flex flex-row mt-[16px] md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
-                            <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
+                        <div class="flex flex-col mt-[16px] md:mt-0 md:flex-col md:gap-y-10">
+                            <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[256px]">
+                                <img src="/public/assets/icon.svg" alt="Icon" />
+                                <p class="text-[12px] font-medium md:text-[14px]">Automatically distribute different types of rewards</p>
+                            </div>
+                            <div class="flex flex-row mt-[16px] mb-[50px] md:mb-0 md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[256px]">
+                                <img src="/public/assets/icon.svg" alt="Icon" />
+                                <p class="text-[12px] font-medium md:text-[14px]">Monitor winners, spending, and prevent sabotage by middle-men</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="flex flex-col mt-[16px] md:mt-0 md:flex-col md:gap-y-10">
-                        <div class="flex flex-row items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
-                            <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
-                        </div>
-                        <div class="flex flex-row mt-[16px] mb-[50px] md:mb-0 md:mt-0 items-center gap-2 justify-center text-white md:flex-row md:gap-x-3.5 w-[220px]">
-                            <img src="/public/assets/icon.svg" alt="Icon" />
-                            <p class="text-[12px] font-medium md:text-[14px]">Reward consumers directly at point of purchase</p>
-                        </div>
+                    <div class="md:mt-[50px]">
+                        <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4  left-0 hover:bg-cyan-500 rounded-xl capitalize">request demo </button>
                     </div>
-               
-            </div>
-                <div class="md:mt-[50px]">
-                    <button class="bg-[#46F7AD] text-sm text-[#05596B]   font-bold duration-500 px-6 py-4  left-0 hover:bg-cyan-500 rounded-xl capitalize">Join the team </button>
                 </div>
             </div>
-            
-        </div>
-   
-        </div>
-
+        </div> 
+ 
 
         
      
@@ -195,7 +189,7 @@
                         <p class="text-[12px] items-center tracking-wide text-center justify-items-center font-normal mt-[16px] md:mt-[24px] md:text-[14px]">We bring pure technology value to our clients regardless of the type and size of their business.</p>
                     </div>
                 </div>
-                <div class="">
+                <div class="w-full">
                     <img  src="/public/assets/history.svg" alt="history" />
                 </div>
             </section>
