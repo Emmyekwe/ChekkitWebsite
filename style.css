@@ -1962,6 +1962,74 @@ span .heart {
         /* margin: 100px 0px; */
       }
 
+
+
+
+
+      .carousel-container {
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      .carousel {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+      }
+      
+      .carousel-slide {
+        display: flex;
+      }
+      
+      .carousel-slide img {
+        width: 33.33%; /* Adjust as per your requirements */
+        height: auto;
+        object-fit: cover;
+      }
+      
+      /* Navigation arrows */
+      .carousel-container .prev,
+      .carousel-container .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 24px;
+      }
+      
+      .carousel-container .prev {
+        left: 10px;
+      }
+      
+      .carousel-container .next {
+        right: 10px;
+      }
+      
+      /* Optional: Add styling to indicate active image */
+      .carousel-slide img.active {
+        border: 2px solid #ff0000;
+      }
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       @media screen and (max-width: 600px) {
         .links.responsive {position: relative;}
         .links.responsive .icon {
