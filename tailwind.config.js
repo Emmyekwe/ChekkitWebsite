@@ -33,10 +33,9 @@ module.exports = {
         'marquee-infinite' : 'marquee 25s linear infinite',
       },
       fontFamily: {
-        'satoshi': ['Satoshi-Regular', 'sans-serif'],
-        'athletics': ['Athletics-Regular', 'sans-serif']
-
-      }
+        sans: ['Graphik', 'sans-serif'],
+        // serif: ['Merriweather', 'serif'],
+      },
     },
   },
   plugins: [
