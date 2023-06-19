@@ -30,7 +30,7 @@
                       <a class="font-sans font-medium text-lg hover:text-[#46F7AD] duration-500 " href="/aboutus.html">About Us</a>
                   </li>
                   <li class="mx-4 my-6 md:my-0">
-                      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn font-sans font-medium text-lg hover:text-[#46F7AD] duration-500" > <a  href="/products.html">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
+                      <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown"  type="button" class="dropbtn font-sans font-medium text-lg hover:text-[#46F7AD] duration-500" > <a  href="#">Products</a>  <i class="fa-solid fa-angle-down" aria-hidden="true"></i></button>
                           <div id="dropdown" class="z-10 bg-white hidden divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                               <ul class="py-1 font-sans font-normal text-lg text-[#242424B2] dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                                   <li>
@@ -86,30 +86,33 @@
             </div>
         </div>
         <div class="flex flex-col md:flex-row md:overflow-x-auto">
+            <!-- <div>
+                <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left"></i></button>
+            </div> -->
             <div class="flex overflow-x-scroll scrollbar-hide" >
                 <div class="flex flex-col gap-x-5 gap-y-5 md:flex-row flex-nowrap mx-[16px] ">
-                    <div class="bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
+                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
                         <img class="h-[283px] md:h-[340px] mx-auto px-[30px]" src="/public/assets/ChekkitApp.png" alt="chekkitapp" />
                         <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                             <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekkitApp</h1>
                             <p class="font-sans hover:text-white text-[12px] font-normal md:text-[14px]">Identify Fake Products And Win Instant Rewards.</p>
                         </div>
                     </div>
-                    <div class="bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:mx-[50px]">
+                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:mx-[50px]">
                             <img class="h-[283px] md:h-[340px] mx-auto px-[30px]" src="/public/assets/chekintel.png" alt="ci" />
                             <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                                 <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekIntel</h1>
                                 <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Bypass middlemen like retailers or research companies & use real-time first-party data from your consumers to spot market opportunities.</p>
                             </div>
                     </div>
-                    <div class="bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
+                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
                             <img class="h-[283px] md:h-[340px] mx-auto px-[30px]"  src="/public/assets/Chektrace.gif" alt="traceability" />
                             <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                                 <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekTrace</h1>
                                 <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Serialize you products in line with GS1 & NAFDAC/FDA guidelines without excess spending on new equipment. Compliant in over 100 countries.</p>
                             </div>
                     </div>
-                    <div class="bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:ml-[50px]">
+                    <div class="carousel-itembg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:ml-[50px]">
                         <img class="h-[283px] md:h-[340px] mx-auto px-[30px]"  src="/public/assets/chek-track.gif" alt="supply chain" />
                         <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                             <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekTrack</h1>
@@ -118,6 +121,9 @@
                     </div>
                 </div>
             </div>
+            <!-- <div>
+                <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right"></i></button>
+            </div>  -->
         
         </div>     
    </section>
@@ -448,5 +454,14 @@
             let list = document.querySelector('ul');
             e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100')) :( e.name = "menu" ,list.classList.remove('top-[80px]'),list.classList.remove('opacity-100'))
             }
+
+            function scrolll() {
+        var left = document.querySelector(".scroll-images")
+        left.scrollBy(350, 0)
+        }
+        function scrollr() {
+            var right = document.querySelector(".scroll-images")
+            right.scrollBy(-350, 0)
+        }
         </script>
 </html> 
