@@ -15,7 +15,7 @@
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     
     </head>
-<body class="bg-white">
+<body class="bg-white font-sans">
     <nav class="w-full h-[72px] md:h-[124px] bg-white  md:flex md:items-center justify-between md:px-[100px] md:py-5">
         <div class="container px-4 md:px-0 h-full mx-auto flex justify-between items-center">
              
@@ -52,7 +52,7 @@
                       <a class="font-sans font-medium text-lg hover:text-[#46F7AD] duration-500" href="/case-studies.html">Case Studies</a>
                   </li>
                   <li class="mx-4 my-6 md:my-0">
-                    <a class="font-sans font-medium text-lg hover:text-[#46F7AD] duration-500" href="./reading-interface.html">Blog</a>
+                    <a class="font-sans font-medium text-lg hover:text-[#46F7AD] duration-500" href="https://chekkitapp.com/blog/">Blog</a>
                 </li>
                   <li class="mx-4 my-6 md:my-0">
                       <button class="bg-white text-[#153853] border-2 border-[#153853] font-sans font-medium text-lg duration-500 px-6 py-4 mx-4 my-4 left-0 hover:text-white hover:bg-[#153853] rounded-2xl">Client Login</button>
@@ -76,54 +76,67 @@
         </div>
 
         <!-- OUR PRODUCTS -->
-   <section class="mt-[80px] md:mt-[150px] ">
+   <section class="mt-[80px] md:mt-[150px] w-full">
         <div class="mb-[16px] mx-[16px] md:mx-[100px] md:mb-[150px]">
             <div class="bg-[#E5EEF0] mb-[16px] p-[8px] w-[125px] h-[32px]  md:w-[159px] md:h-[52px] md:p-[16px] rounded-[100px]">
                 <p class="text-sm font-sans tracking-wide font-black text-center  text-[#153853] md:font-black ">OUR PRODUCTS</p>
             </div>
             <div >
-                <h1 class="font-sans text-[#001117] text-[16px] md:text-[36px] tracking-wide font-semibold">Built for pro-active manufacturers, importers, NGOs, distributors, regulators, retailers, and consumers </h1> 
+                <h1 class="font-sans font-bold text-[#001117] text-[16px] md:text-[36px] tracking-wide ">Built for pro-active manufacturers, importers, NGOs, distributors, regulators, retailers, and consumers </h1> 
             </div>
         </div>
         <div class="flex flex-col md:flex-row md:overflow-x-auto">
-            <!-- <div>
-                <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left"></i></button>
-            </div> -->
-            <div class="flex overflow-x-scroll scrollbar-hide" >
-                <div class="flex flex-col gap-x-5 gap-y-5 md:flex-row flex-nowrap mx-[16px] ">
-                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
-                        <img class="h-[283px] md:h-[340px] mx-auto px-[30px]" src="/public/assets/ChekkitApp.png" alt="chekkitapp" />
-                        <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
-                            <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekkitApp</h1>
-                            <p class="font-sans hover:text-white text-[12px] font-normal md:text-[14px]">Identify Fake Products And Win Instant Rewards.</p>
+            <div class="hidden md:flex md:justify-center ">
+                <button class="icon" onclick="scrolll()"> <i class="fas fa-angle-double-left bg-[#153853] p-4 m-2 text-white rounded-lg"></i></button>
+            </div>
+            <div class="flex overflow-x-scroll scrollbar-hide " >
+                <div class="flex flex-col gap-x-5 gap-y-5 md:flex-row flex-nowrap mx-[16px] scroll-images">
+                    
+                    <a href="/products/chekkitapp.html">
+                        <div class=" bg-[#fafafa] cursor-pointer py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] w-full">
+                            <img class="h-[283px] md:h-[340px] mx-auto px-[30px]" src="/public/assets/ChekkitApp.png" alt="chekkitapp" />
+                            <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
+                                <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekkitApp</h1>
+                                <p class="font-sans hover:text-white text-[12px] font-normal md:text-[14px]">Identify Fake Products And Win Instant Rewards.</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:mx-[50px]">
+                    </a>
+                    <a href="/products/consumer-intelligence.html"> 
+                        <div class=" cursor-pointer bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:mx-[50px] w-full">
                             <img class="h-[283px] md:h-[340px] mx-auto px-[30px]" src="/public/assets/chekintel.png" alt="ci" />
                             <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                                 <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekIntel</h1>
                                 <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Bypass middlemen like retailers or research companies & use real-time first-party data from your consumers to spot market opportunities.</p>
                             </div>
-                    </div>
-                    <div class="carousel-item bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px]">
+                        </div>
+                    </a>
+                    
+                    <a href="/products/traceability.html">
+                        <div class=" cursor-pointer bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] w-full">
                             <img class="h-[283px] md:h-[340px] mx-auto px-[30px]"  src="/public/assets/Chektrace.gif" alt="traceability" />
                             <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
                                 <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekTrace</h1>
                                 <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Serialize you products in line with GS1 & NAFDAC/FDA guidelines without excess spending on new equipment. Compliant in over 100 countries.</p>
                             </div>
-                    </div>
-                    <div class="carousel-itembg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:ml-[50px]">
-                        <img class="h-[283px] md:h-[340px] mx-auto px-[30px]"  src="/public/assets/chek-track.gif" alt="supply chain" />
-                        <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
-                            <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekTrack</h1>
-                            <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Get 5x more consumer verifications than other MAS labels & collect insights on side effects, drug efficacy, purchase patterns, sales locations, etc.</p>
                         </div>
-                    </div>
+                    </a>
+
+                    <a href="/products/traceability.html">
+                        <div class=" cursor-pointer bg-[#fafafa] py-[50px] rounded-[20px] h-100 w-100 md:h-[595px] md:w-[595px] justify-items-center items-center justify-self-auto hover:bg-[#153853] hover:text-white md:py-[50px] md:ml-[50px]">
+                            <img class="h-[283px] md:h-[340px] mx-auto px-[30px]"  src="/public/assets/chek-track.gif" alt="supply chain" />
+                            <div class=" mt-[30px] md:mt-[60px] mx-[30px]">
+                                <h1 class="font-sans text-[14px] font-black capitalize md:text-[30px] mb-[16px]">ChekTrack</h1>
+                                <p class=" hover:text-white text-[12px] font-normal md:text-[14px]">Get 5x more consumer verifications than other MAS labels & collect insights on side effects, drug efficacy, purchase patterns, sales locations, etc.</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    
                 </div>
             </div>
-            <!-- <div>
-                <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right"></i></button>
-            </div>  -->
+            <div class="hidden md:flex md:justify-center ">
+                <button class="icon" onclick="scrollr()"> <i class="fas fa-angle-double-right bg-[#153853] p-4 m-2 text-white rounded-lg"></i></button>
+            </div> 
         
         </div>     
    </section>
@@ -456,11 +469,11 @@
             }
 
             function scrolll() {
-        var left = document.querySelector(".scroll-images")
+        let left = document.querySelector(".scroll-images")
         left.scrollBy(350, 0)
         }
         function scrollr() {
-            var right = document.querySelector(".scroll-images")
+            let right = document.querySelector(".scroll-images")
             right.scrollBy(-350, 0)
         }
         </script>
